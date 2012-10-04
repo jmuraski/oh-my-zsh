@@ -4,6 +4,8 @@ alias po='popd'
 
 # Basic directory operations
 alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 alias -- -='cd -'
 
 # Super user
@@ -17,7 +19,7 @@ alias history='fc -l 1'
 # List direcory contents
 alias lsa='ls -lah'
 alias l='ls -la'
-alias ll='ls -l'
+alias ll='ls -alF'
 alias sl=ls # often screw this up
 
 alias afind='ack-grep -il'
