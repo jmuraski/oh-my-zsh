@@ -1,0 +1,8 @@
+#compdef cdw
+
+_cdw() {
+  if (( CURRENT == 2 )); then
+    compadd $(command ls ~/Documents/workspace)
+  fi
+}
+

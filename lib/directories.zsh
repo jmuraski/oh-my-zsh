@@ -20,6 +20,20 @@ alias 7='cd +7'
 alias 8='cd +8'
 alias 9='cd +9'
 
+export ENV="dev"
+export MYSQL_HOME="/usr/local/mysql"
+export WORKSPACE="/Users/a830505/Documents/workspace"
+
+export PATH="$PATH:$SCRIPTS"
+export PATH="$PATH:/usr/local/bin"
+
+alias llw="ll $WORKSPACE"
+alias reload="source ~/.zshrc"
+alias editprofile="mate ~/.zshrc"
+alias cds="cd $SCRIPTS"
+alias lls="ll -alF $SCRIPTS"
+alias sshKeys="cd ~/Documents/keys/ssh"
+
 cd () {
   if   [[ "x$*" == "x..." ]]; then
     cd ../..
@@ -34,11 +48,15 @@ cd () {
   fi
 }
 
+cdw(){
+  cd $WORKSPACE/$1;
+}
+
 alias md='mkdir -p'
 alias rd=rmdir
 alias d='dirs -v | head -10'
 
 # mkdir & cd to it
-function mcd() { 
-  mkdir -p "$1" && cd "$1"; 
+function mcd() {
+  mkdir -p "$1" && cd "$1";
 }
