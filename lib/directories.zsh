@@ -28,8 +28,6 @@ export PATH="$PATH:$SCRIPTS"
 export PATH="$PATH:/usr/local/bin"
 
 alias llw="ll $WORKSPACE"
-alias reload="source ~/.zshrc"
-alias editprofile="mate ~/.zshrc"
 alias cds="cd $SCRIPTS"
 alias lls="ll -alF $SCRIPTS"
 alias sshKeys="cd ~/Documents/keys/ssh"
