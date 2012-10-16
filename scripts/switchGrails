@@ -1,0 +1,11 @@
+#! /bin/bash
+
+echo "Switching to groovy version: $1"
+echo "Switching to grails version: $2"
+
+changeLink /usr/local/groovy /usr/local/$1
+changeLink /usr/local/grails /usr/local/$2
+
+echo "Done!"
+
+ls -latr /usr/local/{groovy,grails}

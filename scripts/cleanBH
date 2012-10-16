@@ -1,0 +1,28 @@
+#! /bin/bash
+
+echo 'removing grails bloomhealth projects bloom common'
+rm -r ~/.grails/1.3.8/projects/bloomhealth/plugins/bloom-common*;
+
+echo 'removing grails bloomhealth projects bloom domain'
+rm -r ~/.grails/1.3.8/projects/bloomhealth/plugins/bloom-domain*;
+
+echo 'removing bloomhealth target dir'
+rm -r ~/Documents/workspace/bloomhealth/bloomhealth/target;
+
+echo 'removing maven bloom common dir'
+rm -r ~/.m2/repository/org/grails/plugins/bloom-common;
+
+echo 'removing maven bloom domain dir'
+rm -r ~/.m2/repository/org/grails/plugins/bloom-domain;
+
+echo 'removing grails bhbo projects bloom common'
+rm -r ~/.grails/2.0.3/projects/bhbo/plugins/bloom-common*;
+
+echo 'removing grails bhbo projects bloom domain'
+rm -r ~/.grails/2.0.3/projects/bhbo/plugins/bloom-domain*;
+
+echo 'removing bhbo target dir'
+rm -r ~/Documents/workspace/bhbo/bhbo/target;
+
+echo 'calling cleanIvy script'
+cleanIvy;

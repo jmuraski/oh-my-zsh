@@ -1,0 +1,38 @@
+#! /bin/bash
+
+hg_status=`hg stat | awk '{print $1'}`
+hg_bookmark=`hg bookmark | grep '*' | awk '{print $2'}`
+hg_incoming_status=`hg incoming -v | grep files | awk '{for (i=2; i<=NF; i++)  print $i }' | sort | uniq`
+if [ -n "$hg_incoming_status" ]; then
+	echo 'Has incoming changes' 
+	if [ -z "$hg_status" ]; then
+		echo 'Status is Clean, rebasing'
+		if [ -n "$hg_bookmark" -a "$hg_bookmark" != "master" ]; then
+			echo 'has bookmark rebasing'
+			echo "hg up master"
+			hg up master
+			echo 'hg pull --rebase'
+			hg pull --rebase
+			echo "hg up $hg_bookmark"
+			hg up "$hg_bookmark"
+			echo -n "Rebase y?: "
+			read -n 1 command
+			if [ "$command" != "n" -a "$command" != "N" ]; then
+				echo ''
+				echo "rebasing......."
+				echo "hg rebase -b hg_bookmark -d master"
+				hg rebase -b "$hg_bookmark" -d master
+			fi
+			echo ''
+			hg bookmarks
+		else
+			echo 'does not have bookmark just doing fetch'
+			echo "hg pull --rebase"
+			hg pull --rebase
+		fi
+	else
+		echo "Status is not clean it is $hg_status aborting operation"
+	fi
+else
+	echo 'No Incoming changes aborting operation'
+fi

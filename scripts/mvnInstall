@@ -1,0 +1,49 @@
+#! /bin/bash
+
+echo 'Changing to bloom common dir'
+cd ~/Documents/workspace/bloom-common
+hg_common_status=`hg stat | awk '{print $1'}`
+hg_common_incoming_status=`hg incoming -v | grep files | awk '{for (i=2; i<=NF; i++)  print $i }' | sort | uniq`
+
+
+if [ -z "$hg_common_status" ]; then
+	if [ -n "$hg_common_incoming_status" -o ! -d ~/.m2/repository/org/grails/plugins/bloom-common ]; then
+		echo 'Common has incoming changes or is missing maven file'
+		echo 'calling rebase script for common'
+		hgRebase
+		echo 'cleaning bloom-common'
+		grails clean
+		echo 'packaging bloom-common'
+		grails package
+		echo 'installing bloom-common'
+		grails maven-install
+	else
+		echo "no incoming changes for common and maven file exists - skipping pull and install"
+	fi
+	
+	echo 'Changing to bloom Domain dir'
+	cd ~/Documents/workspace/bloom-domain
+	hg_domain_status=`hg stat | awk '{print $1'}`
+	hg_domain_incoming_status=`hg incoming -v | grep files | awk '{for (i=2; i<=NF; i++)  print $i }' | sort | uniq`
+	
+	if [ -z "$hg_domain_status" ]; then 
+		
+		if [ -n "$hg_domain_incoming_status"   -o ! -d ~/.m2/repository/org/grails/plugins/bloom-domain ]; then
+			echo 'Domain has incoming changes or is missing maven file' 
+			echo 'Calling rebase Script for domain'
+			hgRebase
+			echo 'cleaning bloom-domain'
+			grails clean
+			echo 'packaging bloom-domain'
+			grails package
+			echo 'installing bloom-domain'
+			grails maven-install
+		else
+			echo "no incoming changes for domain and maven file exists - skipping pull and install"
+		fi		
+	else
+		echo "hg Status for domain is not clean it is $hg_domain_status"
+	fi
+else
+	echo "hg Status for common is not clean it is $hg_common_status"
+fi

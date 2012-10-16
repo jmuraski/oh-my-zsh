@@ -1,0 +1,19 @@
+#! /bin/bash
+
+cd ~/Documents/workspace/bloom-common
+
+grails test-app
+
+open target/test-reports/html/index.html
+
+cd ~/Documents/workspace/bloom-domain
+
+grails test-app
+
+open target/test-reports/html/index.html
+
+cd ~/Documents/workspace/bloomhealth/bloomhealth
+
+grails test-app
+
+open target/test-reports/html/index.html

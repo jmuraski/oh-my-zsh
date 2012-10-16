@@ -22,10 +22,8 @@ alias 9='cd +9'
 
 export ENV="dev"
 export MYSQL_HOME="/usr/local/mysql"
-export WORKSPACE="/Users/a830505/Documents/workspace"
-
-export PATH="$PATH:$SCRIPTS"
-export PATH="$PATH:/usr/local/bin"
+export WORKSPACE="$HOME/Documents/workspace"
+export SCRIPTS="$HOME/.oh-my-zsh/scripts"
 
 alias llw="ll $WORKSPACE"
 alias cds="cd $SCRIPTS"

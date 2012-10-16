@@ -1,0 +1,4 @@
+#! /bin/bash
+
+echo "Calling Grails Version"
+grails-version grails $*

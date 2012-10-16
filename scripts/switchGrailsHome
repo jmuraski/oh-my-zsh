@@ -1,0 +1,13 @@
+#! /bin/bash
+
+echo "Switching to groovy version: $1"
+echo "Switching to grails version: $2"
+
+export GROOVY_HOME="/usr/local/$1"
+export GRAILS_HOME="/usr/local/$2"
+
+export PATH="$GROOVY_HOME/bin:$GRAILS_HOME/bin:$PATH"
+
+echo "GROOVY_HOME NOW - $GROOVY_HOME"
+echo "GRAILS_HOME NOW - $GRAILS_HOME"
+echo "Done!"

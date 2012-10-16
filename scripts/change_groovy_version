@@ -1,0 +1,5 @@
+#! /bin/bash
+
+cd /usr/local
+sudo rm groovy
+sudo ln -s groovy-$1 groovy
