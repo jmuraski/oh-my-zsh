@@ -23,11 +23,11 @@ alias 9='cd +9'
 export ENV="dev"
 export MYSQL_HOME="/usr/local/mysql"
 export WORKSPACE="$HOME/Documents/workspace"
-export SCRIPTS="$HOME/.oh-my-zsh/scripts"
+export MY_SCRIPTS="$HOME/.oh-my-zsh/scripts"
 
 alias llw="ll $WORKSPACE"
-alias cds="cd $SCRIPTS"
-alias lls="ll -alF $SCRIPTS"
+alias cds="cd $MY_SCRIPTS"
+alias lls="ll -alF $MY_SCRIPTS"
 alias sshKeys="cd ~/Documents/keys/ssh"
 
 cd () {
