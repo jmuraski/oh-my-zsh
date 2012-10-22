@@ -1,0 +1,50 @@
+" For solarize theme
+syntax enable
+set background=dark
+colorscheme solarized
+
+" allow hidden files
+set hidden
+
+" allow highlight
+set hlsearch
+
+" Set tab settings
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+" use case insensitive search, except when using capital letters
+set ignorecase
+set smartcase
+
+" When opening a new line and no filetyp-specific indenting is enabled, keep
+" the same indent as the line your're currently on.
+set autoindent
+
+" Enable use of the mouse for all modes
+set mouse=a
+
+" Instead of failing a command because of unsaved changes, rasie a dialoge asking if you wish to save
+set confirm
+
+" Use visual bell instead of beeping when doing something wrong
+set visualbell
+
+" show line numbers
+set number
+
+" Show the cursor postion on the bottom of the screen 
+set ruler
+
+" Set the command window height to 2 lines
+set cmdheight=2
+
+" Map <C-L> (redraw screen) to also turn off search highlighting until the new search
+nnoremap <C-L> :nohl<CR><C-L>
+
+" added to toggle background
+call togglebg#map("<F5")
+
+
