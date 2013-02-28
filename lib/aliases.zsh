@@ -35,6 +35,8 @@ alias editdirs="subl ~/.oh-my-zsh/lib/directories.zsh"
 
 alias startpostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias stoppostgres='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias startTomcat7='/usr/local/apache-tomcat-7.0.37/bin/startup.sh'
+alias shutdownTomcat7='/usr/local/apache-tomcat-7.0.37/bin/shutdown.sh'
 
 alias startmongo='/usr/local/Cellar/mongodb/2.2.1-x86_64/mongod run --rest'
 # export CC=gcc
