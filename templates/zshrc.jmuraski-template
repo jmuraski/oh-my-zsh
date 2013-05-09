@@ -39,6 +39,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$MY_SCRIPTS
 export PATH=$PATH:/usr/local/share/npm/bin
+export PATH=$PATH:/Applications/kdiff3.app/Contents/MacOS			
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
