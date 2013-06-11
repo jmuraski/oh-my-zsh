@@ -19,7 +19,6 @@ alias history='fc -l 1'
 
 # List direcory contents
 alias lsa='ls -lah'
-<<<<<<< HEAD
 alias ll='ls -alF'
 alias l='ls -lA1'
 alias la='ls -lA'
@@ -56,8 +55,16 @@ alias ssh-ca-dev30='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245
 alias ssh-ca-dev-tomcat='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-30.us-west-2.compute.amazonaws.com'
 alias ssh-ca-dev32='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-32.us-west-2.compute.amazonaws.com'
 alias ssh-ca-dev-apache='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-32.us-west-2.compute.amazonaws.com'
+alias ssh-ca-uat40='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-214-28-40.us-west-2.compute.amazonaws.com'
+alias ssh-ca-uat-tomcat='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-214-28-40.us-west-2.compute.amazonaws.com'
+alias ssh-ca-uat35='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-214-28-35.us-west-2.compute.amazonaws.com'
+alias ssh-ca-uat-apache='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-214-28-35.us-west-2.compute.amazonaws.com'
 alias ssh-jenkins='ssh -v -i ~/.ssh/keys/jenkins-ssh-keypair.pem ec2-user@54.245.238.194'
 
 alias bounceCommerceUi='curl --user admin:admin "http://localhost:8080/manager/text/reload?path=/commerceui"'
 alias github-fe='open https://github.com/bestbuyremix/commerce_anywhere_fe'
 alias github-rest='open https://github.com/bestbuyremix/commerce_ui'
+
+alias -s log="less -MN"
+alias -g G='| grep'
+alias rvmLoad='rvm .rvmrc'
