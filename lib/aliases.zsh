@@ -64,6 +64,8 @@ alias ssh-jenkins='ssh -v -i ~/.ssh/keys/jenkins-ssh-keypair.pem ec2-user@54.245
 alias bounceCommerceUi='curl --user admin:admin "http://localhost:8080/manager/text/reload?path=/commerceui"'
 alias github-fe='open https://github.com/bestbuyremix/commerce_anywhere_fe'
 alias github-rest='open https://github.com/bestbuyremix/commerce_ui'
+alias jira='open "https://bbyopen.jira.com/secure/RapidBoard.jspa?rapidView=35"'
+alias sauce-connect="/usr/local/Sauce-Connect/open"
 
 alias -s log="less -MN"
 alias -g G='| grep'
