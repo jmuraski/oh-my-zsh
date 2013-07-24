@@ -1,0 +1,10 @@
+#! /bin/bash
+
+cd ~/Documents/workspace/Commerce-UI/commerceui
+
+/usr/local/apache-tomcat-7.0.37/bin/shutdown.sh
+
+mvn clean
+mvn -DskipTests=true deploy
+
+/usr/local/apache-tomcat-7.0.37/bin/startup.sh
