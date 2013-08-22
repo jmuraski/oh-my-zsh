@@ -65,6 +65,7 @@ alias bounceCommerceUi='curl --user admin:admin "http://localhost:8080/manager/t
 alias github-fe='open https://github.com/bestbuyremix/commerce_anywhere_fe'
 alias github-rest='open https://github.com/bestbuyremix/commerce_ui'
 alias jira='open "https://bbyopen.jira.com/secure/RapidBoard.jspa?rapidView=35"'
+alias jenkins='open "http://54.245.238.194/"'
 alias sauce-connect="/usr/local/Sauce-Connect/open"
 alias artifactory='open "https://code.bestbuy.com/artifactory/"'
 
