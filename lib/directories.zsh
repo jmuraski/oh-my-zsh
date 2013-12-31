@@ -28,6 +28,8 @@ export MY_SCRIPTS="$HOME/.oh-my-zsh/scripts"
 export HOMEBREW_HOME="/usr/local/Cellar"
 export RIAK_HOME="$HOMEBREW_HOME/riak/1.2.1-x86_64"
 export HBASE_HOME="$HOMEBREW_HOME/hbase/0.94.2"
+export GRADLE_HOME="/usr/local/gradle-1.9"
+export GROOVY_HOME="/usr/local/groovy-2.2.1"
 
 alias startriak="$RIAK_HOME/bin/riak start"
 alias stopriak="$RIAK_HOME/bin/riak stop"
