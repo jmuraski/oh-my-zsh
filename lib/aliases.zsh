@@ -64,10 +64,15 @@ alias ssh-jenkins='ssh -v -i ~/.ssh/keys/jenkins-ssh-keypair.pem ec2-user@54.245
 alias bounceCommerceUi='curl --user admin:admin "http://localhost:8080/manager/text/reload?path=/commerceui"'
 alias github-fe='open https://github.com/bestbuyremix/commerce_anywhere_fe'
 alias github-rest='open https://github.com/bestbuyremix/commerce_ui'
+alias github-partner='open https://github.com/bestbuyremix/commerce_anywhere_partner'
+alias github-sim='open https://github.com/bestbuyremix/commerce_anywhere_sim'
+alias github-bully='open https://github.com/jmuraski/mean_playground_bully'
 alias jira='open "https://bbyopen.jira.com/secure/RapidBoard.jspa?rapidView=35"'
 alias jenkins='open "http://54.245.238.194/"'
 alias sauce-connect="/usr/local/Sauce-Connect/open"
 alias artifactory='open "https://code.bestbuy.com/artifactory/"'
+
+alias chomeInsecure="open -a Google\ Chrome --args --disable-web-security"
 
 alias -s log="less -MN"
 alias -g G='| grep'

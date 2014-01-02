@@ -1,0 +1,31 @@
+#! /bin/bash
+
+pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+
+cd ~/Documents/workspace/commerce_ui
+  
+git pull
+
+cd ~/Documents/workspace/commerce_ui/commerceui
+
+/usr/local/apache-tomcat-7.0.37/bin/shutdown.sh
+
+mvn clean
+
+mvn -DskipTests=true deploy
+
+/usr/local/apache-tomcat-7.0.37/bin/startup.sh
+
+ntrmc tailTomcat
+
+cd ~/Documents/workspace/commerce_anywhere_partner
+
+git pull
+
+ntrmc grails run-app -Dgrails.server.port.http=8090
+
+cd ~/Documents/workspace/commerce_anywhere_fe
+
+git pull
+
+ntrmc grunt server

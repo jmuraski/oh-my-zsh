@@ -4,14 +4,19 @@ GRAILS_CMD=$1
 shift
 if [ -f application.properties ]; then
 	export GRAILS_VERSION=`grep app.grails.version application.properties | sed -E 's/.*=(.*)/\1/'`
-	if [[ $GRAILS_VERSION = 2.2.4 ]]; then
+	if [[ $GRAILS_VERSION = 2.3.1 ]]; then
+		echo "Grails Version is $GRAILS_VERSION"
+		export GRAILS_HOME="/usr/local/grails-2.3.1"
+		export GROOVY_HOME="/usr/local/groovy-2.1.6"
+		echo "GROOVY_HOME NOW - $GROOVY_HOME"
+		echo "GRAILS_HOME NOW - $GRAILS_HOME"
+	elif [[ $GRAILS_VERSION = 2.2.4 ]]; then
 		echo "Grails Version is $GRAILS_VERSION"
 		export GRAILS_HOME="/usr/local/grails-2.2.4"
 		export GROOVY_HOME="/usr/local/groovy-2.1.6"
-
 		echo "GROOVY_HOME NOW - $GROOVY_HOME"
 		echo "GRAILS_HOME NOW - $GRAILS_HOME"
-	elif [[ $GRAILS_VERSION = 2.0.3* ]]; then
+  elif [[ $GRAILS_VERSION = 2.0.3* ]]; then
 		echo "Grails Version is $GRAILS_VERSION"
 		export GRAILS_HOME="/usr/local/grails-2.0.3"
 		export GROOVY_HOME="/usr/local/groovy-1.8.5"
@@ -30,7 +35,9 @@ if [ -f application.properties ]; then
 		echo "Grails Version of $GRAILS_VERSION did not match 2.0.1 or 1.3.8 leaving values unchanged"
 	fi
 else 
-	echo "application.properties NOT found, leaving \$GRAILS_HOME as $GRAILS_HOME"
+	echo "application.properties NOT found, leaving"
+  export GRAILS_HOME="/usr/local/grails-2.3.1"
+  export GROOVY_HOME="/usr/local/groovy-2.1.6"
 fi
 
 if [ ! -d $GRAILS_HOME ]; then
