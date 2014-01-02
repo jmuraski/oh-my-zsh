@@ -1,0 +1,35 @@
+#! /bin/bash
+
+svn checkout https://code.bestbuy.com/svn/dotcom/Commerce-UI/branches/commerce-anywhere ce_branch
+svn checkout https://code.bestbuy.com/svn/dotcom/Commerce-UI/trunk ce_trunk
+git clone git@github.com:bestbuyremix/commerce_ui.git git
+cd git
+git checkout svn_master
+cp -r .git ../ce_branch/.
+cp .gitignore ../ce_branch/.
+cd ../ce_branch
+svn update
+#svn merge https://code.bestbuy.com/svn/dotcom/Commerce-UI/trunk
+# If Tree Conflicts
+#svn resolve --accept working -R .
+#svn commit -m "[CAPI-2520] Merge with trunk"
+#git commit -am "Merge with SVN Trunk"
+#git push
+# if changes in svn_master need to merge those changes to master and other branches
+#git checkout master
+#git pull
+#git merge svn_master
+#git push
+#git checkout svn_master
+#git merge origin/master (if different)
+#git push
+#git merge origin/develop (if not a release branch)
+#git push
+#git merge origin/release/1.0.25 (if release branch)
+#git push
+#svn rm  `svn status | grep ! | awk '{ print $2 }'`
+#svn add `svn status | grep "?" | awk '{ print $2 }'`
+#svn commit -m "m[CAPI-2520] merge with external changes"
+#cd ../ce_trunk
+#svn merge https://code.bestbuy.com/svn/dotcom/Commerce-UI/branches/commerce-anywhere
+#svn commit -m "[CAPI-2520] merge with branch"
