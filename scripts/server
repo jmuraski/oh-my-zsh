@@ -1,0 +1,6 @@
+#! /bin/bash
+
+(sleep 1; open http://localhost:7000) &
+
+http-server . -p 7000 -i "false"
+
