@@ -1,0 +1,7 @@
+bower
+coffee-script
+grunt-cli
+http-server
+karma
+node-inspector
+yo

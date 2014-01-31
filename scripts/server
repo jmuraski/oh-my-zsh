@@ -1,0 +1,12 @@
+#! /bin/bash
+
+PORT=3000
+
+if [ -e "./GruntFile.js" ] 
+then
+  grunt serve
+else 
+  (sleep 1; open http://localhost:$PORT) &
+
+  http-server .  -p $PORT -i "false"
+fi
