@@ -56,7 +56,7 @@ alias shutdownTomcat7='/usr/local/apache-tomcat-7.0.37/bin/shutdown.sh'
 alias tomcat7Shutdown='/usr/local/apache-tomcat-7.0.37/bin/shutdown.sh'
 alias tailTomcat='tail -f /usr/local/apache-tomcat-7.0.37/logs/catalina.out'
 
-alias startmongo='/usr/local/Cellar/mongodb/2.2.1-x86_64/mongod run --rest'
+alias startmongo='/usr/local/Cellar/mongodb/2.4.9/mongod run --rest'
 # export CC=gcc
 
 alias start1='~/Documents/Virtual\ Machines.localized/startUbuntu.sh'

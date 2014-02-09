@@ -1,3 +1,8 @@
 #! /bin/bash
 
-ls /usr/local/share/npm/lib/node_modules
+if [ -e "/usr/local/share/npm/node_modules" ] 
+then
+  ls /usr/local/share/npm/lib/node_modules
+else 
+  ls /usr/local/lib/node_modules
+fi
