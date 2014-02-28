@@ -29,18 +29,20 @@ ZSH_THEME="jmuraski"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow coffee bower brew node npm rvm svn history mvn)
+plugins=(git git-flow coffee bower brew node npm rvm svn history mvn, docker, grails)
  
 source $ZSH/oh-my-zsh.sh
 
 # RVM line
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$MY_SCRIPTS
 export PATH=$PATH:/usr/local/share/npm/bin
 export PATH=$PATH:/Applications/kdiff3.app/Contents/MacOS	
-export PATH=$PATH:$GRADLE_HOME/bin		
+export PATH=$PATH:/usr/local/opt/ruby/bin
+export PATH=$PATH:$GRADLE_HOME/bin	
+export DOCKER_HOST=tcp://	
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
