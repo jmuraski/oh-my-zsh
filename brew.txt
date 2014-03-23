@@ -1,5 +1,7 @@
 autoconf
 automake
+boot2docker
+docker
 dos2unix
 gdbm
 gettext

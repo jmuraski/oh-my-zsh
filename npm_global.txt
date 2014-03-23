@@ -1,5 +1,6 @@
 bower
 coffee-script
+cordova
 fsevents
 generator-angular
 generator-ember
@@ -7,6 +8,7 @@ generator-jasmine
 generator-karma
 generator-mocha
 generator-polymer
+generator-protractor
 generator-webapp
 grunt-cli
 http-server
@@ -20,6 +22,7 @@ karma-phantomjs-launcher
 karma-requirejs
 karma-script-launcher
 node-inspector
+npm
 recursive-readdir
 requirejs
 yo
