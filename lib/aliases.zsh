@@ -30,8 +30,8 @@ fi
 # List direcory contents
 alias lsa='ls -lah'
 alias ll='ls -alF'
-alias l='ls -lA1'
-alias la='ls -lA'
+alias l='ls -lah'
+alias la='ls -lAh'
 alias sl=ls # often screw this up
 alias llg='ls -alF | grep '
 
