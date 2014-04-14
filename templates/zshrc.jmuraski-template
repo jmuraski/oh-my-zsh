@@ -41,7 +41,9 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$MY_SCRIPT
 export PATH=$PATH:/usr/local/share/npm/bin
 export PATH=$PATH:/Applications/kdiff3.app/Contents/MacOS	
 export PATH=$PATH:/usr/local/opt/ruby/bin
-export PATH=$PATH:$GRADLE_HOME/bin	
+export PATH=$PATH:$GRADLE_HOME/bin
+export PATH=$PATH:/Users/jmuraski/Documents/android/adt-bundle-mac-x86_64-20131030/sdk/tools
+export PATH=$PATH:/Users/jmuraski/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools
 export DOCKER_HOST=tcp://	
 
 ### Added by the Heroku Toolbelt

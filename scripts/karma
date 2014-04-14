@@ -1,0 +1,9 @@
+#! /bin/bash
+
+if [ -e node_modules/karma/bin/karma ]
+then
+  node_modules/karma/bin/karma "$@"
+else
+  /usr/local/lib/node_modules/karma/bin/karma "$@"
+fi
+

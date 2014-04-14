@@ -92,6 +92,7 @@ alias github-tcfs='open https://github.com/DevJams/tcf_simulator'
 alias github-zeoui='open https://github.com/DevJams/zeo_ui'
 alias github-zeos='open https://github.com/DevJams/zeo_server'
 alias ports-devjam="ssh root@107.170.22.200 docker ps | grep -o 'app.*' | sed -e 's/\(app\/[a-z,A-Z,_,0-9]*\).*\(0.0.0.0\)/\1 \2/' | awk '{print \$1 \" - \" \$2}'"
+alias versionOne='open "https://www3.v1host.com/partner_DevJam/Default.aspx?menu=DetailTrackingPage"'
 
 alias sauce-connect="/usr/local/Sauce-Connect/open"
 alias chomeInsecure="open -a Google\ Chrome --args --disable-web-security"
