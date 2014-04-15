@@ -1,6 +1,9 @@
+ant
+apktool
 autoconf
 automake
 boot2docker
+dex2jar
 docker
 dos2unix
 gdbm
@@ -10,7 +13,9 @@ git-flow
 hadoop
 hbase
 jpeg-turbo
+jq
 libyaml
+maven
 mongodb
 nasm
 node
