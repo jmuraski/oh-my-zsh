@@ -1,0 +1,17 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"DetectSyntax",
+		"Emmet",
+		"Git",
+		"Indent XML",
+		"Markdown Preview",
+		"MarkdownEditing",
+		"Package Control",
+		"RSpec",
+		"SmartMarkdown",
+		"Solarized Color Scheme",
+		"Theme - Soda"
+	]
+}
