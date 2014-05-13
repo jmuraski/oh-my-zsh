@@ -1,7 +1,7 @@
-# ~/.tmuxinator/zeo_server.yml
+# ~/.tmuxinator/zeo_ui.yml
 
-name: zeo_server_dev
-root: ~/Documents/workspace/zeo_server
+name: zeo_ui
+root: ~/Documents/workspace/zeo_ui
 
 # Optional tmux socket
 # socket_name: foo
@@ -19,11 +19,12 @@ root: ~/Documents/workspace/zeo_server
 # tmux_command: byobu
 
 windows:
-  - testing:
+  - editor:
       layout: main-horizontal
       panes:
-        - grails:
-            - docker/postgresql/run.sh
-            - grails
-        - guard -G ../zeoServer.guardFile
-        - #empty, just shell
+        - git pull
+        - kamra:
+        	- grunt clean
+        	- grunt build
+        	- karma start
+
