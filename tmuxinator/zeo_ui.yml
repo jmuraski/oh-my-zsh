@@ -19,12 +19,14 @@ root: ~/Documents/workspace/zeo_ui
 # tmux_command: byobu
 
 windows:
-  - editor:
-      layout: main-horizontal
+  - testing:
+      layout: even-vertical
       panes:
-        - git pull
-        - kamra:
-        	- grunt clean
-        	- grunt build
-        	- karma start
-
+        - serve:
+          - # Pane for serve
+        - karma:
+          - # Pane for Karma
+        - shell:
+          - grunt clean
+          - trap "echo 'caught signal'" 0 1 2 3 
+          - grunt buildLocalHtml  && tmux send-keys -t zeo_ui:1.1 'grunt serve' C-m && tmux send-keys -t zeo_ui:1.2 'karma start' C-m

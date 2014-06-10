@@ -47,6 +47,8 @@ alias vimfunctions="vim ~/.oh-my-zsh/lib/functions.zsh"
 alias editdirs="subl ~/.oh-my-zsh/lib/directories.zsh"
 alias vimdirs="vim ~/.oh-my-zsh/lib/directories.zsh"
 alias vi='vim'
+alias exip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias inip='ipconfig getifaddr en0'
 
 alias startpostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias stoppostgres='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
