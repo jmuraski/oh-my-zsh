@@ -14,6 +14,7 @@ hadoop
 hbase
 jpeg-turbo
 jq
+libevent
 libyaml
 maven
 mongodb
@@ -29,5 +30,6 @@ readline
 riak
 ruby
 sbt
+tmux
 tree
 wget

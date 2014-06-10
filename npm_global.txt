@@ -9,6 +9,7 @@ generator-mobile
 generator-mocha
 generator-polymer
 generator-webapp
+gitbook
 grunt-cli
 http-server
 httpster
