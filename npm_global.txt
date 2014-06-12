@@ -27,6 +27,7 @@ karma-requirejs
 karma-script-launcher
 node-inspector
 npm
+plugman
 recursive-readdir
 requirejs
 yo

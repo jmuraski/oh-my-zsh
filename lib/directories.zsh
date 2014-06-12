@@ -33,7 +33,7 @@ export GROOVY_HOME="/usr/local/groovy-2.2.1"
 export HOMEBREW_GITHUB_API_TOKEN="735a56b3d43f92cb78445c5fd9f7a76447df891e"
 export ANDROID_HOME="/Users/jmuraski/Documents/android/adt-bundle-mac-x86_64-20131030/sdk"
 export EDITOR='vim'
-export DOCKER_HOST=tcp://localhost:4243
+export DOCKER_HOST=tcp://localhost:2375
 
 alias startriak="$RIAK_HOME/bin/riak start"
 alias stopriak="$RIAK_HOME/bin/riak stop"

@@ -100,5 +100,6 @@ alias sauce-connect="/usr/local/Sauce-Connect/open"
 alias chromeInsecure="open -a Google\ Chrome --args --disable-web-security"
 
 alias -s log="less -MN"
+alias -s txt="less -MN"
 alias -g G='| grep'
 alias rvmLoad='rvm .rvmrc'
