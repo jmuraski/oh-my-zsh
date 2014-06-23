@@ -42,8 +42,8 @@ export PATH=$PATH:/usr/local/share/npm/bin
 export PATH=$PATH:/Applications/kdiff3.app/Contents/MacOS	
 export PATH=$PATH:/usr/local/opt/ruby/bin
 export PATH=$PATH:$GRADLE_HOME/bin
-export PATH=$PATH:/Users/jmuraski/Documents/android/adt-bundle-mac-x86_64-20131030/sdk/tools
-export PATH=$PATH:/Users/jmuraski/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools	
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_TOOLS
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
