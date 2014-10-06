@@ -1,17 +1,14 @@
 # ~/.tmuxinator/zeo_server.yml
 
-name: zeo_server_dev
-root: ~/Documents/workspace/zeo_server
+name: ri_server_dev
+root: ~/Documents/workspace/remoteinsights/webapp
 
 # Optional tmux socket
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
-pre:
-  export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
-  export GVM_INIT=false
-  source ~/.gvm/bin/gvm-init.sh
+pre: initGVM
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -27,8 +24,15 @@ windows:
       layout: main-horizontal
       panes:
         - grails:
+            - switchJava 1.7
             - docker/postgresql/run.sh
-            - gvm use grails 2.3.6
-            - grails
-        - guard -G ../zeoServer.guardFile
+            - docker/redis/run.sh
+            - export PATH=$PATH:/Users/jmuraski/.gvm/groovy/current/bin:/Users/jmuraski/.gvm/grails/current/bin
+            - gvm use grails 2.3.11
+            - grails -reloading
+        - #empty, just shell
+  - guard:
+      layout: main-horizontal
+      panes:
+        - guard -G ../riServer.guardFile
         - #empty, just shell

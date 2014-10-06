@@ -11,6 +11,7 @@ generator-polymer
 generator-webapp
 gitbook
 grunt-cli
+gulp
 http-server
 httpster
 ios-deploy
@@ -26,7 +27,9 @@ karma-phantomjs-launcher
 karma-requirejs
 karma-script-launcher
 node-inspector
+nodemon
 npm
+phonegap
 plugman
 recursive-readdir
 requirejs

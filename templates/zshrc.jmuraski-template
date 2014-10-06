@@ -47,3 +47,6 @@ export PATH=$PATH:$ANDROID_TOOLS
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/jmuraski/.gvm/bin/gvm-init.sh" ]] && source "/Users/jmuraski/.gvm/bin/gvm-init.sh"

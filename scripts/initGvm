@@ -1,0 +1,6 @@
+#! /bin/bash
+
+echo "GVM_INIT; $GVM_INIT"
+export GVM_INIT=false
+echo "GVM_INIT: $GVM_INIT"
+source ~/.gvm/bin/gvm-init.sh

@@ -2,7 +2,7 @@
 
 export DOCKER_HOST=tcp://localhost:4243
 
-for i in {49000..49900}; do
+for i in {49000..49999}; do
   
   x=$((i % 100));
   
@@ -11,6 +11,6 @@ for i in {49000..49900}; do
     echo "On $i"
   fi
 
-  VBoxManage modifyvm "boot2docker-vm" --natpf1 delete "tcp-port$i,tcp,,$i,,$i";
-  VBoxManage modifyvm "boot2docker-vm" --natpf1 delete "udp-port$i,udp,,$i,,$i";
+  VBoxManage modifyvm "boot2docker-vm" --natpf1 delete "tcp-port$i";
+  VBoxManage modifyvm "boot2docker-vm" --natpf1 delete "udp-port$i";
 done

@@ -38,13 +38,16 @@ alias llg='ls -alF | grep '
 alias afind='ack-grep -il'
 
 alias reload="source ~/.zshrc"
-alias editprofile="subl ~/.zshrc"
+alias editprofile="atom ~/.zshrc"
 alias vimprofile="vim ~/.zshrc"
-alias editalias="subl ~/.oh-my-zsh/lib/aliases.zsh"
+alias editalias="atom ~/.oh-my-zsh/lib/aliases.zsh"
 alias vimalias="vim ~/.oh-my-zsh/lib/aliases.zsh"
-alias editfunctions="subl ~/.oh-my-zsh/lib/functions.zsh"
+alias edithosts="atom /private/etc/hosts"
+alias vimhosts="vim /private/etc/hosts"
+alias listhosts="cat /private/etc/hosts"
+alias editfunctions="atom ~/.oh-my-zsh/lib/functions.zsh"
 alias vimfunctions="vim ~/.oh-my-zsh/lib/functions.zsh"
-alias editdirs="subl ~/.oh-my-zsh/lib/directories.zsh"
+alias editdirs="atom ~/.oh-my-zsh/lib/directories.zsh"
 alias vimdirs="vim ~/.oh-my-zsh/lib/directories.zsh"
 alias vi='vim'
 alias exip='dig +short myip.opendns.com @resolver1.opendns.com'
@@ -65,6 +68,10 @@ alias startmongo='/usr/local/Cellar/mongodb/2.4.9/mongod run --rest'
 alias start1='~/Documents/Virtual\ Machines.localized/startUbuntu.sh'
 alias con1="ssh jmuraski@192.168.163.100"
 alias github-bully='open https://github.com/jmuraski/mean_playground_bully'
+
+
+# Remote Insights Aliases
+alias startRedis='redis-server /usr/local/etc/redis.conf'
 
 # Best Buy Aliases
 #alias ssh-ca-dev30='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-30.us-west-2.compute.amazonaws.com'

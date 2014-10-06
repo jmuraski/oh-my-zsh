@@ -6,10 +6,13 @@ boot2docker
 dex2jar
 docker
 dos2unix
+etcdctl
+fleetctl
 gdbm
 gettext
 git
 git-flow
+go
 hadoop
 hbase
 jpeg-turbo
@@ -27,9 +30,11 @@ phantomjs
 pkg-config
 postgresql
 readline
+redis
 riak
 ruby
 sbt
+ssh-copy-id
 tmux
 tree
 wget
