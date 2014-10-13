@@ -26,6 +26,7 @@ node
 openssl
 optipng
 ossp-uuid
+pcre
 phantomjs
 pkg-config
 postgresql
@@ -38,3 +39,4 @@ ssh-copy-id
 tmux
 tree
 wget
+zsh
