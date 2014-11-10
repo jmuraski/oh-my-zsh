@@ -30,9 +30,8 @@ windows:
             - export PATH=$PATH:/Users/jmuraski/.gvm/groovy/current/bin:/Users/jmuraski/.gvm/grails/current/bin
             - gvm use grails 2.3.11
             - grails -reloading
-        - #empty, just shell
+        - guard -G ../riServer.guardFile
   - guard:
       layout: main-horizontal
       panes:
-        - guard -G ../riServer.guardFile
         - #empty, just shell

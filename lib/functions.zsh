@@ -122,3 +122,7 @@ function env_default() {
 function switchJava() {
 export JAVA_HOME=$(/usr/libexec/java_home -v $1)
 }
+
+function fleet_tunnel_tcf(){
+  export FLEETCTL_TUNNEL=$TCF_EC2
+}

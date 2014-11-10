@@ -49,6 +49,8 @@ alias editfunctions="atom ~/.oh-my-zsh/lib/functions.zsh"
 alias vimfunctions="vim ~/.oh-my-zsh/lib/functions.zsh"
 alias editdirs="atom ~/.oh-my-zsh/lib/directories.zsh"
 alias vimdirs="vim ~/.oh-my-zsh/lib/directories.zsh"
+alias editssh='atom ~/.ssh/config'
+alias vimssh='vim ~/.ssh/config'
 alias vi='vim'
 alias exip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias inip='ipconfig getifaddr en0'
@@ -72,6 +74,22 @@ alias github-bully='open https://github.com/jmuraski/mean_playground_bully'
 
 # Remote Insights Aliases
 alias startRedis='redis-server /usr/local/etc/redis.conf'
+
+
+# Fleet Commands
+alias fl='fleetctl '
+alias fld='fleetctl destroy '
+alias flm='fleetctl list-machines'
+alias flst='fleetctl start '
+alias fls='fleetctl start '
+alias flsto='fleetctl stop '
+alias flop='fleetctl stop '
+alias flu='fleetctl list-units'
+alias flub='fleetctl submit '
+alias fluf='fleetctl list-unit-files'
+alias flssh='fleetctl ssh '
+alias flstat='fleetctl status '
+alias flat='fleetctl status '
 
 # Best Buy Aliases
 #alias ssh-ca-dev30='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-30.us-west-2.compute.amazonaws.com'

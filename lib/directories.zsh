@@ -34,7 +34,10 @@ export HOMEBREW_GITHUB_API_TOKEN="735a56b3d43f92cb78445c5fd9f7a76447df891e"
 export ANDROID_HOME="/Users/jmuraski/Documents/android/adt-bundle-mac-x86_64-20140321/sdk"
 export ANDROID_TOOLS="$ANDROID_HOME/platform-tools"
 export EDITOR='vim'
-export DOCKER_HOST=tcp://localhost:2375
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/jmuraski/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+export TCF_EC2='54.69.190.50'
 
 alias startriak="$RIAK_HOME/bin/riak start"
 alias stopriak="$RIAK_HOME/bin/riak stop"
@@ -52,7 +55,7 @@ notebook(){
     cd ~/Documents/Notebooks
     git add .
     git commit -m 'updating'
-    git push   
+    git push
   elif [[ "$1" == "load" ]]; then
     cd ~/Documents/Notebooks
     git pull
