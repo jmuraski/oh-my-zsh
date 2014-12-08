@@ -27,6 +27,7 @@ windows:
             - switchJava 1.7
             - docker/postgresql/run.sh
             - docker/redis/run.sh
+            - export GVM_VERSION=2.2.0
             - export PATH=$PATH:/Users/jmuraski/.gvm/groovy/current/bin:/Users/jmuraski/.gvm/grails/current/bin
             - gvm use grails 2.3.11
             - grails -reloading
