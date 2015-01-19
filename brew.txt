@@ -2,6 +2,7 @@ ant
 apktool
 autoconf
 automake
+bison
 boot2docker
 dex2jar
 docker
@@ -13,8 +14,7 @@ gettext
 git
 git-flow
 go
-hadoop
-hbase
+iftop
 jpeg-turbo
 jq
 libevent
@@ -31,12 +31,11 @@ phantomjs
 pkg-config
 postgresql
 readline
-redis
-riak
 ruby
 sbt
 ssh-copy-id
 tmux
 tree
 wget
+yajl
 zsh

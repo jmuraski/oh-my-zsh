@@ -30,7 +30,7 @@ ZSH_THEME="jmuraski"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git git-flow coffee bower brew node npm rvm svn history mvn, docker, grails, tmux, tmuxinator)
- 
+
 source $ZSH/oh-my-zsh.sh
 
 # RVM line
@@ -39,7 +39,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/usr/local/sbin:/sbin:/usr/X11/bin:$MY_SCRIPTS
 export PATH=$PATH:/usr/local/share/npm/bin
-export PATH=$PATH:/Applications/kdiff3.app/Contents/MacOS	
+export PATH=$PATH:/Applications/kdiff3.app/Contents/MacOS
 export PATH=$PATH:/usr/local/opt/ruby/bin
 export PATH=$PATH:$GRADLE_HOME/bin
 export PATH=$PATH:$ANDROID_HOME/tools
