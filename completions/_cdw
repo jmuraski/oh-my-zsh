@@ -2,7 +2,6 @@
 
 _cdw() {
   if (( CURRENT == 2 )); then
-    compadd $(command ls -alF ~/Documents/workspace | grep "/")
+    compadd $(command ls -alF ~/app/workspace | grep "/")
   fi
 }
-
