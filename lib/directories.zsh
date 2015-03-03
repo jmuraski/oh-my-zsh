@@ -34,7 +34,7 @@ export ANDROID_HOME="/Users/jmuraski/Documents/android/adt-bundle-mac-x86_64-201
 export ANDROID_TOOLS="$ANDROID_HOME/platform-tools"
 export EDITOR='vim'
 export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/jmuraski/.boot2docker/certs/boot2docker-vm
+export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 export TCF_EC2='54.69.190.50'
 
