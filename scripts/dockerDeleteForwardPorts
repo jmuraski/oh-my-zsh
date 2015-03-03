@@ -1,6 +1,6 @@
 #! /bin/bash
 
-export DOCKER_HOST=tcp://localhost:4243
+boot2docker halt
 
 for i in {49000..49999}; do
   

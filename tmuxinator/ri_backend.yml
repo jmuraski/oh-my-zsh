@@ -1,0 +1,42 @@
+# ~/.tmuxinator/zeo_server.yml
+
+name: ri_backend
+root: ~/Documents/workspace/remoteinsights/backend
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+pre: initGVM
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - testing:
+      layout: b461,150x39,0,0[150x29,0,0,0,150x9,0,30{104x9,0,30,2,45x9,105,30,3}]
+      panes:
+        - grails:
+            - switchJava 1.8
+            - boot2docker up
+            - docker/postgresql/run.sh
+            - export GVM_VERSION=2.2.0
+            - export PATH=$PATH:/Users/jmuraski/.gvm/groovy/current/bin:/Users/jmuraski/.gvm/grails/current/bin
+            - gvm use grails 2.4.4
+            - gvm use gradle 2.2.1
+            - grails -reloading
+        - Extras:
+          - ../setTests.sh
+        - Nodemon:
+          - nodemon --watch src --watch test --watch grails-app -e groovy -x bash ../upArrowCommand.sh
+  - guard:
+      layout: main-horizontal
+      panes:
+        - #empty, just shell

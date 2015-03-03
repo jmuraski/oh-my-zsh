@@ -90,6 +90,9 @@ alias fluf='fleetctl list-unit-files'
 alias flssh='fleetctl ssh '
 alias flstat='fleetctl status '
 alias flat='fleetctl status '
+alias fload='fleetctl load '
+alias flog='fleetctl journal '
+alias flogs='fleetctl journal -f '
 
 # Best Buy Aliases
 #alias ssh-ca-dev30='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-30.us-west-2.compute.amazonaws.com'
@@ -120,6 +123,13 @@ alias github-zeoui='open https://github.com/DevJams/zeo_ui'
 alias github-zeos='open https://github.com/DevJams/zeo_server'
 alias ports-devjam="ssh root@107.170.22.200 docker ps | grep -o 'app.*' | sed -e 's/\(app\/[a-z,A-Z,_,0-9]*\).*\(0.0.0.0\)/\1 \2/' | awk '{print \$1 \" - \" \$2}'"
 alias versionOne='open "https://www3.v1host.com/partner_DevJam/TeamRoom.mvc/Show/1762"'
+
+
+#Remote Insights Aliases
+alias github-ri-front='open https://github.com/RemoteInsights/ri_frontend'
+alias github-ri-back='open https://github.com/RemoteInsights/ri_backend'
+alias github-ri-web='open https://github.com/RemoteInsights/webapp'
+alias github-ri-sim='open https://github.com/RemoteInsights/Simulator'
 
 alias sauce-connect="/usr/local/Sauce-Connect/open"
 alias chromeInsecure="open -a Google\ Chrome --args --disable-web-security"

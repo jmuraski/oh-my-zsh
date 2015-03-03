@@ -1,0 +1,31 @@
+{
+  "name": "special-html",
+  "version": "0.0.1",
+  "description": "Convert special UTF-8 characters in a string to their HTML escape code equivalents.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha -u tdd --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hughsk/special-html.git"
+  },
+  "keywords": [
+    "special",
+    "characters",
+    "html",
+    "utf8",
+    "replace",
+    "escape"
+  ],
+  "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughskennedy.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.7.4"
+  },
+  "readmeFilename": "README.md",
+  "gitHead": "509cb0ee5ce50a4935ba89e05e252015ea37b864",
+  "directories": {
+    "test": "test"
+  }
+}
