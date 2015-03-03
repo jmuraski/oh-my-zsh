@@ -22,7 +22,7 @@ alias 9='cd -9'
 
 export ENV="dev"
 export MYSQL_HOME="/usr/local/mysql"
-export WORKSPACE="$HOME/Documents/workspace"
+export WORKSPACE="$HOME/apps/workspace"
 export MY_SCRIPTS="$HOME/.oh-my-zsh/scripts"
 export HOMEBREW_HOME="/usr/local/Cellar"
 export RIAK_HOME="$HOMEBREW_HOME/riak/1.2.1-x86_64"
