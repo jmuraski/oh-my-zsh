@@ -3,3 +3,7 @@
     userId: "013ff4e1-bf05-b584-4b45-67969b29fe1d"
   welcome:
     showOnStartup: false
+  core: {}
+  editor:
+    invisibles: {}
+    fontSize: 12
