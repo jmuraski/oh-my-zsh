@@ -133,8 +133,10 @@ alias github-ri-sim='open https://github.com/RemoteInsights/Simulator'
 
 alias sauce-connect="/usr/local/Sauce-Connect/open"
 alias chromeInsecure="open -a Google\ Chrome --args --disable-web-security"
+alias marked="open -a Marked\ 2 "
 
 alias -s log="less -MN"
 alias -s txt="less -MN"
+alias -s md="open -a Marked\ 2"
 alias -g G='| grep'
 alias rvmLoad='rvm .rvmrc'
