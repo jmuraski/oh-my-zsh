@@ -3,12 +3,10 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus
 
-alias ..='cd ..'
-alias cd..='cd ..'
-alias cd...='cd ../..'
-alias cd....='cd ../../..'
-alias cd.....='cd ../../../..'
-alias cd/='cd /'
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
 
 alias 1='cd -'
 alias 2='cd -2'
@@ -63,23 +61,6 @@ notebook(){
   fi
 }
 
-cd () {
-  if   [[ "x$*" == "x..." ]]; then
-    cd ../..
-  elif [[ "x$*" == "x...." ]]; then
-    cd ../../..
-  elif [[ "x$*" == "x....." ]]; then
-    cd ../../../..
-  elif [[ "x$*" == "x......" ]]; then
-    cd ../../../../..
-  elif [ -d ~/.autoenv ]; then
-    source ~/.autoenv/activate.sh
-    autoenv_cd "$@"
-  else
-    builtin cd "$@"
-  fi
-}
-
 cdw(){
   cd $WORKSPACE/$1;
 }
@@ -93,3 +74,12 @@ alias d='dirs -v | head -10'
 function mcd() {
   mkdir -p "$1" && cd "$1";
 }
+# List directory contents
+alias lsa='ls -lah'
+alias l='ls -lah'
+alias ll='ls -lh'
+alias la='ls -lAh'
+
+# Push and pop directories on directory stack
+alias pu='pushd'
+alias po='popd'
