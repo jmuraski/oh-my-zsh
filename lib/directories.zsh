@@ -83,6 +83,7 @@ cd () {
 cdw(){
   cd $WORKSPACE/$1;
 }
+compctl -W $WORKSPACE/ -/ cdw
 
 alias md='mkdir -p'
 alias rd=rmdir
