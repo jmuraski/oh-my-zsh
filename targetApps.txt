@@ -1,0 +1,87 @@
+├── App Store.app
+├── Automator.app
+├── BetterSnapTool.app
+├── Caffeine.app
+├── Calculator.app
+├── Calendar.app
+├── Charles.app
+├── Chess.app
+├── Citrix Receiver.app
+├── CodeBox.app
+├── Contacts.app
+├── DVD Player.app
+├── Dashboard.app
+├── Dictionary.app
+├── EDGESupportMenu.app
+├── FaceTime.app
+├── Firefox.app
+├── Font Book.app
+├── Game Center.app
+├── Google Chrome.app
+├── Growl.app
+├── HipChat.app
+├── Image Capture.app
+├── IntelliJ IDEA 14.app
+├── Junos Pulse.app
+├── Karabiner.app
+├── Launchpad.app
+├── Mail.app
+├── Maps.app
+├── Marked 2.app
+├── Messages.app
+├── Microsoft Lync.app
+│   ├── Microsoft Document Connection.app
+│   ├── Microsoft Excel.app
+│   ├── Microsoft Outlook.app
+│   ├── Microsoft PowerPoint.app
+│   ├── Microsoft Word.app
+├── Microsoft Silverlight -> /Library/Internet Plug-Ins/Silverlight.plugin/Contents/Resources/Silverlight Preferences.app
+├── Mission Control.app
+├── Notes.app
+├── Photo Booth.app
+├── Preview.app
+├── QuickTime Player.app
+├── Reminders.app
+├── Safari.app
+├── Self Service.app
+├── Slack.app
+├── Snagit.app
+├── SourceTree.app
+├── Stickies.app
+│   ├── LiveUpdate.app
+│   └── Symantec Endpoint Protection.app
+├── System Preferences copy.app
+├── System Preferences.app
+├── TextEdit.app
+├── Time Machine.app
+├── To-do Lists.app
+├── Transmit.app
+│   ├── Activity Monitor.app
+│   ├── Adobe Flash Player Install Manager.app
+│   ├── AirPort Utility.app
+│   ├── AppleScript Editor.app
+│   ├── Audio MIDI Setup.app
+│   ├── Bluetooth File Exchange.app
+│   ├── Boot Camp Assistant.app
+│   ├── ColorSync Utility.app
+│   ├── Console.app
+│   ├── DigitalColor Meter.app
+│   ├── Disk Utility.app
+│   ├── Grab.app
+│   ├── Grapher.app
+│   ├── Keychain Access.app
+│   ├── Migration Assistant.app
+│   ├── Network Utility.app -> /System/Library/CoreServices/Applications/Network Utility.app
+│   ├── Property List Editor.app
+│   ├── Recon.app
+│   ├── System Information.app
+│   ├── Terminal.app
+│   ├── VoiceOver Utility.app
+│   ├── X11.app
+├── VirtualBox.app
+├── WebStorm.app
+├── Xcode.app
+├── iBooks.app
+├── iTerm.app
+├── iTunes.app
+└── kdiff3.app

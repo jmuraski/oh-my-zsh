@@ -1,0 +1,12 @@
+bower
+coffee-script
+generator-angular
+generator-gulp-angular
+generator-gulp-webapp
+generator-karma
+generator-mocha
+gulp
+gulp-build-instructions
+nodemon
+npm
+yo
