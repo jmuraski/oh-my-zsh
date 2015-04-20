@@ -63,17 +63,13 @@ alias shutdownTomcat7='/usr/local/apache-tomcat-7.0.37/bin/shutdown.sh'
 alias tomcat7Shutdown='/usr/local/apache-tomcat-7.0.37/bin/shutdown.sh'
 alias tailTomcat='tail -f /usr/local/apache-tomcat-7.0.37/logs/catalina.out'
 
-alias startmongo='/usr/local/Cellar/mongodb/2.4.9/mongod run --rest'
+
 # export CC=gcc
 
 # Manta Aliases
 alias start1='~/Documents/Virtual\ Machines.localized/startUbuntu.sh'
 alias con1="ssh jmuraski@192.168.163.100"
 alias github-bully='open https://github.com/jmuraski/mean_playground_bully'
-
-
-# Remote Insights Aliases
-alias startRedis='redis-server /usr/local/etc/redis.conf'
 
 
 # Fleet Commands
@@ -94,25 +90,6 @@ alias fload='fleetctl load '
 alias flog='fleetctl journal '
 alias flogs='fleetctl journal -f '
 
-# Best Buy Aliases
-#alias ssh-ca-dev30='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-30.us-west-2.compute.amazonaws.com'
-#alias ssh-ca-dev-tomcat='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-30.us-west-2.compute.amazonaws.com'
-#alias ssh-ca-dev32='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-32.us-west-2.compute.amazonaws.com'
-#alias ssh-ca-dev-apache='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-32.us-west-2.compute.amazonaws.com'
-#alias ssh-ca-uat40='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-214-28-40.us-west-2.compute.amazonaws.com'
-#alias ssh-ca-uat-tomcat='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-214-28-40.us-west-2.compute.amazonaws.com'
-#alias ssh-ca-uat35='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-214-28-35.us-west-2.compute.amazonaws.com'
-#alias ssh-ca-uat-apache='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-214-28-35.us-west-2.compute.amazonaws.com'
-#alias ssh-jenkins='ssh -v -i ~/.ssh/keys/jenkins-ssh-keypair.pem ec2-user@54.245.238.194'
-#alias bounceCommerceUi='curl --user admin:admin "http://localhost:8080/manager/text/reload?path=/commerceui"'
-#alias github-fe='open https://github.com/bestbuyremix/commerce_anywhere_fe'
-#alias github-rest='open https://github.com/bestbuyremix/commerce_ui'
-#alias github-partner='open https://github.com/bestbuyremix/commerce_anywhere_partner'
-#alias github-sim='open https://github.com/bestbuyremix/commerce_anywhere_sim'
-#alias jira='open "https://bbyopen.jira.com/secure/RapidBoard.jspa?rapidView=35"'
-#alias jenkins='open "http://54.245.238.194/"'
-#alias artifactory='open "https://code.bestbuy.com/artifactory/"'
-
 #Dev Jam Aliases
 alias ssh-devjam-ci='ssh root@192.241.248.176'
 alias ssh-devjam-docker='ssh root@107.170.22.200'
@@ -124,17 +101,11 @@ alias github-zeos='open https://github.com/DevJams/zeo_server'
 alias ports-devjam="ssh root@107.170.22.200 docker ps | grep -o 'app.*' | sed -e 's/\(app\/[a-z,A-Z,_,0-9]*\).*\(0.0.0.0\)/\1 \2/' | awk '{print \$1 \" - \" \$2}'"
 alias versionOne='open "https://www3.v1host.com/partner_DevJam/TeamRoom.mvc/Show/1762"'
 
-
-#Remote Insights Aliases
-alias github-ri-front='open https://github.com/RemoteInsights/ri_frontend'
-alias github-ri-back='open https://github.com/RemoteInsights/ri_backend'
-alias github-ri-web='open https://github.com/RemoteInsights/webapp'
-alias github-ri-sim='open https://github.com/RemoteInsights/Simulator'
-
 alias sauce-connect="/usr/local/Sauce-Connect/open"
 alias chromeInsecure="open -a Google\ Chrome --args --disable-web-security"
 
 alias -s log="less -MN"
 alias -s txt="less -MN"
+alias -s md="open -a 'Marked 2'"
 alias -g G='| grep'
 alias rvmLoad='rvm .rvmrc'

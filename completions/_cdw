@@ -1,7 +1,0 @@
-#compdef cdw
-
-_cdw() {
-  if (( CURRENT == 2 )); then
-    compadd $(command ls -alF ~/apps/workspace | grep "/")
-  fi
-}

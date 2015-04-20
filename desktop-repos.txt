@@ -1,0 +1,67 @@
+./.oh-my-zsh/.git
+?? desktop-repos.txt
+* target
+
+origin	git@github.com:jmuraski/oh-my-zsh.git (fetch)
+origin	git@github.com:jmuraski/oh-my-zsh.git (push)
+
+./.vim/.git
+* master
+
+origin	git@github.com:jmuraski/vim.git (fetch)
+origin	git@github.com:jmuraski/vim.git (push)
+
+./apps/workspace/browse-jobs-dsl/.git
+* master
+
+origin	git@git.target.com:Browse/browse-jobs-dsl.git (fetch)
+origin	git@git.target.com:Browse/browse-jobs-dsl.git (push)
+
+./apps/workspace/BrowseMod/.git
+* develop
+
+origin	git@git.target.com:Browse/BrowseMod.git (fetch)
+origin	git@git.target.com:Browse/BrowseMod.git (push)
+
+./apps/workspace/browsemod-tgt/.git
+* master
+
+origin	git@git.target.com:Browse/browsemod-tgt.git (fetch)
+origin	git@git.target.com:Browse/browsemod-tgt.git (push)
+
+./apps/workspace/GitJamSession/.git
+* develop
+
+origin	git@git.target.com:Browse/GitJamSession.git (fetch)
+origin	git@git.target.com:Browse/GitJamSession.git (push)
+
+./apps/workspace/gulp-build-instructions/.git
+* feature/boo
+
+origin	git@git.target.com:npm-packages/gulp-build-instructions.git (fetch)
+origin	git@git.target.com:npm-packages/gulp-build-instructions.git (push)
+
+./apps/workspace/node-cli/.git
+* master
+
+origin	git@github.com:jmuraski/node-cli.git (fetch)
+origin	git@github.com:jmuraski/node-cli.git (push)
+
+./apps/workspace/notes/.git
+* master
+
+origin	git@github.com:jmuraski/notes.git (fetch)
+origin	git@github.com:jmuraski/notes.git (push)
+
+./apps/workspace/tcom-frontend-assets/.git
+* cdci/gulpify
+
+origin	git@git.target.com:common-location/tcom-frontend-assets.git (fetch)
+origin	git@git.target.com:common-location/tcom-frontend-assets.git (push)
+
+./apps/workspace/TFP/.git
+* develop
+
+origin	git@git.target.com:Browse/TFP.git (fetch)
+origin	git@git.target.com:Browse/TFP.git (push)
+
