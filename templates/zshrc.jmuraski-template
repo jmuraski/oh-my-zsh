@@ -29,7 +29,7 @@ ZSH_THEME="jmuraski"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow coffee bower brew node npm rvm svn history mvn, docker, grails, tmux, tmuxinator)
+plugins=(git git-flow coffee autojump bower brew node npm rvm history docker grails tmux tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 
