@@ -103,10 +103,10 @@ alias versionOne='open "https://www3.v1host.com/partner_DevJam/TeamRoom.mvc/Show
 
 alias sauce-connect="/usr/local/Sauce-Connect/open"
 alias chromeInsecure="open -a Google\ Chrome --args --disable-web-security"
+alias notes='atom $WORKSPACE/notes'
 
 alias -s log="less -MN"
 alias -s txt="less -MN"
 alias -s md="open -a 'Marked 2'"
 alias -g G='| grep'
 alias rvmLoad='rvm .rvmrc'
-alias notes="atom $WORKSPACE/notes"
