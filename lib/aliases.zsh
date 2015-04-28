@@ -109,3 +109,4 @@ alias -s txt="less -MN"
 alias -s md="open -a 'Marked 2'"
 alias -g G='| grep'
 alias rvmLoad='rvm .rvmrc'
+alias notes="atom $WORKSPACE/notes"
