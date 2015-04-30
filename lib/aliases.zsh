@@ -134,6 +134,7 @@ alias github-ri-sim='open https://github.com/RemoteInsights/Simulator'
 alias sauce-connect="/usr/local/Sauce-Connect/open"
 alias chromeInsecure="open -a Google\ Chrome --args --disable-web-security"
 alias marked="open -a Marked\ 2 "
+alias notes="atom $WORKSPACE/notes"
 
 alias -s log="less -MN"
 alias -s txt="less -MN"
