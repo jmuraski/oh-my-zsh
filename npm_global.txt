@@ -1,5 +1,6 @@
 bower
 coffee-script
+generator-gulp-angular
 gitbook
 grunt-cli
 gulp
@@ -8,6 +9,7 @@ httpster
 node-inspector
 nodemon
 npm
+npm-check-updates
 recursive-readdir
 requirejs
 ri-simulator
