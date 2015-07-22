@@ -35,8 +35,12 @@ alias la='ls -lAh'
 alias sl=ls # often screw this up
 alias llg='ls -alF | grep '
 
+alias md='mkdir -p'
+alias rd=rmdir
+alias d='dirs -v | head -10'
 alias afind='ack-grep -il'
-
+alias lls="ll -alF $MY_SCRIPTS"
+alias sshKeys="cd ~/Documents/keys/ssh"
 alias reload="source ~/.zshrc"
 alias editprofile="atom ~/.zshrc"
 alias vimprofile="vim ~/.zshrc"
@@ -54,6 +58,7 @@ alias vimssh='vim ~/.ssh/config'
 alias vi='vim'
 alias exip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias inip='ipconfig getifaddr en0'
+alias shipit='open $WORKSPACE/shipit'
 
 alias startpostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias stoppostgres='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
@@ -93,6 +98,7 @@ alias flat='fleetctl status '
 alias fload='fleetctl load '
 alias flog='fleetctl journal '
 alias flogs='fleetctl journal -f '
+alias npmr='npm run '
 
 # Best Buy Aliases
 #alias ssh-ca-dev30='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-30.us-west-2.compute.amazonaws.com'
@@ -141,3 +147,18 @@ alias -s txt="less -MN"
 alias -s md="open -a Marked\ 2"
 alias -g G='| grep'
 alias rvmLoad='rvm .rvmrc'
+
+alias ...='../..'
+alias ....='../../..'
+alias .....='../../../..'
+alias ......='../../../../..'
+
+alias 1='cd -'
+alias 2='cd -2'
+alias 3='cd -3'
+alias 4='cd -4'
+alias 5='cd -5'
+alias 6='cd -6'
+alias 7='cd -7'
+alias 8='cd -8'
+alias 9='cd -9'

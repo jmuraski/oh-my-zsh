@@ -4,9 +4,6 @@
     showInvisibles: true
     invisibles: {}
   core:
-    disabledPackages: [
-      "terminal-status"
-    ]
     themes: [
       "one-dark-ui"
       "one-dark-syntax"
@@ -19,3 +16,4 @@
     showOnStartup: false
   metrics:
     userId: "8d95aacb5f53aa86cbed1e11dc5edcd5ceb7e941"
+  "spell-check": {}
