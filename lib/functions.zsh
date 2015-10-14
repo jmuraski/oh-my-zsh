@@ -32,6 +32,21 @@ function trash() {
   IFS=$temp_ifs
 }
 
+function dme(){
+  COMMAND="docker-machine env $1"
+  echo $COMMAND
+  eval $COMMAND
+  eval "$($COMMAND)"
+}
+
+function dmsc(){
+  docker-machine start $1
+  COMMAND="docker-machine env $1"
+  echo $COMMAND
+  eval $COMMAND
+  eval "$($COMMAND)"
+}
+
 function featureBranch() {
   echo "git checkout -b jmuraski/feature/$1"
   git checkout -b jmuraski/feature/$1
