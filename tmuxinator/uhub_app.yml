@@ -1,7 +1,7 @@
 # ~/.tmuxinator/zeo_server.yml
 
-name: uhub_dash
-root: ~/Documents/workspace/uhg/uhubdashboard
+name: uhub_app
+root: ~/Documents/workspace/uhg
 
 # Optional tmux socket
 # socket_name: foo
@@ -20,13 +20,15 @@ pre: dmsc uhubDocker
 # tmux_command: byobu
 
 windows:
-  - testing:
+  - app:
       layout: even-vertical
       panes:
-        - test:
-          - gulp lint:watch
-        - lint:
-          - npm run autoTest
+        - dash:
+            - cd uhubdashboard
+            - npm start
+        - ui:
+          - cd uhubdashboardUI
+          - gulp serve
   - shell:
       layout: main-horizontal
       panes:

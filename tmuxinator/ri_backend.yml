@@ -25,9 +25,9 @@ windows:
       panes:
         - grails:
             - switchJava 1.8
-            - boot2docker up
+            - dmsc riDocker
             - docker/postgresql/run.sh
-            - export GVM_VERSION=2.2.0
+            - export GVM_VERSION=2.4.3
             - export PATH=$PATH:/Users/jmuraski/.gvm/groovy/current/bin:/Users/jmuraski/.gvm/grails/current/bin
             - gvm use grails 2.4.4
             - gvm use gradle 2.2.1
