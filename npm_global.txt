@@ -12,5 +12,4 @@ npm
 npm-check-updates
 recursive-readdir
 requirejs
-ri-simulator
 yo
