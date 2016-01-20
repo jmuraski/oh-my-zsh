@@ -2,6 +2,7 @@
   editor:
     showInvisibles: true
     invisibles: {}
+    fontSize: 16
   core:
     themes: [
       "one-dark-ui"

@@ -1,7 +1,7 @@
 # ~/.tmuxinator/zeo_server.yml
 
 name: uhub_ui
-root: ~/Documents/workspace/uhg/uhubdashboardUI
+root: ~/Documents/workspace/uhubdashboardUI
 
 # Optional tmux socket
 # socket_name: foo

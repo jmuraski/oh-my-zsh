@@ -31,6 +31,7 @@ phantomjs
 pkg-config
 postgresql
 readline
+reattach-to-user-namespace
 ruby
 sbt
 ssh-copy-id
