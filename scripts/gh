@@ -33,7 +33,7 @@ giturl=${giturl%\.git}
 giturl=$(echo "$giturl" | tr ':' '/')
 giturl="${giturl/https\/\/\//}"
 
-giturl="https://$giturl"
+giturl="http://$giturl"
 
 
 if [ -z "$2" ]
