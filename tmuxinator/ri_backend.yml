@@ -21,16 +21,13 @@ pre: initGVM
 
 windows:
   - testing:
-      layout: b461,150x39,0,0[150x29,0,0,0,150x9,0,30{104x9,0,30,2,45x9,105,30,3}]
+      layout: 413b,150x39,0,0[150x24,0,0,0,150x14,0,25{94x14,0,25,2,55x14,95,25,3}]
       panes:
         - grails:
             - switchJava 1.8
-            - dmsc riDocker
-            - docker/postgresql/run.sh
-            - export GVM_VERSION=2.4.3
             - export PATH=$PATH:/Users/jmuraski/.gvm/groovy/current/bin:/Users/jmuraski/.gvm/grails/current/bin
-            - gvm use grails 2.4.4
-            - gvm use gradle 2.2.1
+            - sdk use grails 2.4.4
+            - sdk use gradle 2.2.1
             - grails -reloading
         - Extras:
           - ../setTests.sh
