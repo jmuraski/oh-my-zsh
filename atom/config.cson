@@ -1,18 +1,22 @@
 "*":
-  editor:
-    showInvisibles: true
-    invisibles: {}
   core:
+    disabledPackages: [
+      "emmet"
+    ]
+    telemetryConsent: "no"
     themes: [
       "one-dark-ui"
       "one-dark-syntax"
     ]
+  editor:
+    invisibles: {}
+    showInvisibles: true
   "exception-reporting":
     userId: "2fb2db8f-15a3-4bc5-24db-5e0bd8d912d8"
-  "release-notes":
-    viewedVersion: "0.84.0"
-  welcome:
-    showOnStartup: false
   metrics:
     userId: "8d95aacb5f53aa86cbed1e11dc5edcd5ceb7e941"
+  "release-notes":
+    viewedVersion: "0.84.0"
   "spell-check": {}
+  welcome:
+    showOnStartup: false
