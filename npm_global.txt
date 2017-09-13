@@ -1,5 +1,8 @@
+angular-cli
 bower
 coffee-script
+david
+express-generator
 generator-gulp-angular
 gitbook
 grunt-cli
@@ -12,4 +15,7 @@ npm
 npm-check-updates
 recursive-readdir
 requirejs
+ri-simulator
+typings
+uhubDashboard
 yo
