@@ -1,7 +1,10 @@
+@uhub
+artillery
+bench-rest
 bower
 coffee-script
+express-generator
 generator-gulp-angular
-gitbook
 grunt-cli
 gulp
 http-server
@@ -12,4 +15,6 @@ npm
 npm-check-updates
 recursive-readdir
 requirejs
+sloc
+updtr
 yo

@@ -1,20 +1,44 @@
 "*":
+  Hydrogen:
+    gateways: "[{\"name\": \"Local Notebook\", \"options\": {\"baseUrl\": \"http://localhost:8888\"}}]"
+    kernelNotifications: true
   core:
+    disabledPackages: [
+      "table-editor"
+      "Hydrogen"
+      "graphviz-preview"
+    ]
+    telemetryConsent: "no"
     themes: [
       "one-dark-ui"
       "one-dark-syntax"
     ]
+  date:
+    dateFormat: "YYYY-MM-DD"
+    dateTimeFormat: "YYYY-MM-DDTHH:mm:ssZ"
   editor:
-    fontSize: 16
     invisibles: {}
     showInvisibles: true
     tabType: "soft"
   "exception-reporting":
     userId: "2fb2db8f-15a3-4bc5-24db-5e0bd8d912d8"
+  "graphviz-preview-plus": {}
+  "markdown-writer":
+    tableAlignment: "left"
+    tableExtraPipes: true
   metrics:
     userId: "8d95aacb5f53aa86cbed1e11dc5edcd5ceb7e941"
+  minimap:
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+  organized: {}
   "release-notes":
     viewedVersion: "0.84.0"
   "spell-check": {}
+  "tool-bar":
+    position: "Right"
+    visible: false
+  "tree-view": {}
   welcome:
     showOnStartup: false

@@ -45,8 +45,7 @@ export PATH=$PATH:$GRADLE_HOME/bin
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_TOOLS
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/jmuraski/.gvm/bin/gvm-init.sh" ]] && source "/Users/jmuraski/.gvm/bin/gvm-init.sh"
+export WORKON_HOME=~/.ve
+export PROJECT_HOME=~/Documents/workspace
+eval "$(pyenv init -)"
+# pyenv virtualenvwrapper_lazy
