@@ -4,9 +4,8 @@ apktool
 autoconf
 automake
 bison
-boot2docker
+c-ares
 dex2jar
-docker
 dos2unix
 fleetctl
 fontconfig
@@ -19,7 +18,7 @@ git
 git-flow
 go
 graphviz
-httpie
+icu4c
 iftop
 imagemagick
 jpeg
@@ -29,6 +28,7 @@ libevent
 libpng
 libtiff
 libtool
+libwebsockets
 libyaml
 logstash
 maven
@@ -37,6 +37,9 @@ msodbcsql17
 mssql-tools
 nasm
 netcat
+mosquitto
+nasm
+nmap
 node
 oniguruma
 openssl
@@ -59,6 +62,7 @@ sbt
 shellinabox
 sqlite
 ssh-copy-id
+the_silver_searcher
 tmux
 tree
 unixodbc

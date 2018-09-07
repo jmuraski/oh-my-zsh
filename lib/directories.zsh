@@ -4,6 +4,7 @@ setopt pushd_ignore_dups
 setopt pushdminus
 
 
+alias -- -='cd -'
 
 export ENV="dev"
 export MYSQL_HOME="/usr/local/mysql"

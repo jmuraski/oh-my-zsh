@@ -1,8 +1,11 @@
-@uhub
 artillery
 bench-rest
 bower
 coffee-script
+angular-cli
+bower
+coffee-script
+david
 express-generator
 generator-gulp-angular
 grunt-cli
@@ -17,4 +20,7 @@ recursive-readdir
 requirejs
 sloc
 updtr
+ri-simulator
+typings
+uhubDashboard
 yo
