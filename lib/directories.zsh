@@ -18,6 +18,9 @@ export GROOVY_HOME="/usr/local/groovy-2.2.1"
 export HOMEBREW_GITHUB_API_TOKEN="735a56b3d43f92cb78445c5fd9f7a76447df891e"
 export ANDROID_HOME="/Users/jmuraski/Documents/android/adt-bundle-mac-x86_64-20140321/sdk"
 export ANDROID_TOOLS="$ANDROID_HOME/platform-tools"
+export GOPATH=$HOME/go
+export GOBIN=/usr/local/go/bin
+
 
 alias llw="ll $WORKSPACE"
 alias cds="cd $MY_SCRIPTS"

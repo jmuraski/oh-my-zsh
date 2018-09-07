@@ -104,6 +104,9 @@ alias dm='docker-machine'
 
 alias git-prune='git remote prune origin'
 
+alias isodateutc='date -u +"%Y-%m-%dT%H:%M:%SZ"'
+alias isodate='date +"%Y-%m-%dT%H:%M:%SZ"'
+
 # Best Buy Aliases
 #alias ssh-ca-dev30='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-30.us-west-2.compute.amazonaws.com'
 #alias ssh-ca-dev-tomcat='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-30.us-west-2.compute.amazonaws.com'
