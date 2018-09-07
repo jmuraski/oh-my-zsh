@@ -1,0 +1,29 @@
+artillery
+bench-rest
+bower
+coffee-script
+angular-cli
+bower
+david
+express-generator
+<<<<<<< HEAD
+gitbook
+=======
+generator-gulp-angular
+grunt-cli
+>>>>>>> 8236b9a900a613adaff21ff13c7b689af3a78a29
+gulp
+http-server
+httpster
+node-inspector
+nodemon
+npm-check-updates
+recursive-readdir
+<<<<<<< HEAD
+=======
+requirejs
+sloc
+updtr
+ri-simulator
+>>>>>>> 8236b9a900a613adaff21ff13c7b689af3a78a29
+typings

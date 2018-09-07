@@ -60,7 +60,7 @@ function dme(){
   COMMAND="docker-machine env $1"
   echo $COMMAND
   eval $COMMAND
-  eval "$($COMMAND)"
+  eval "$(docker-machine env $1)"
 }
 
 function dmsc(){
@@ -68,37 +68,9 @@ function dmsc(){
   COMMAND="docker-machine env $1"
   echo $COMMAND
   eval $COMMAND
-  eval "$($COMMAND)"
+  eval "$(docker-machine env $1)"
 }
 
-function featureBranch() {
-  echo "git checkout -b jmuraski/feature/$1"
-  git checkout -b jmuraski/feature/$1
-  echo "git push --set-upstream  origin jmuraski/feature/$1"
-  git push --set-upstream  origin jmuraski/feature/$1
-}
-
-function mergeMaster() {
-  CURRENT_BRANCH=$(git branch | grep "*" | awk '{ print $2 }')
-  echo "Current Branch is $CURRENT_BRANCH"
-  echo "git checkout master"
-  git checkout master
-  echo "git pull"
-  git pull
-  echo "git checkout $CURRENT_BRANCH"
-  git checkout $CURRENT_BRANCH
-  echo "git merge master"
-  git merge master
-}
-
-function removeBranch(){
-  echo "git checkout master"
-  git checkout master
-  echo "git branch -d jmuraski/feature/$1"
-  git branch -d jmuraski/feature/$1
-  echo "git push origin :jmuraski/feature/$1"
-  git push origin :jmuraski/feature/$1
-}
 #
 # Get the value of an alias.
 #

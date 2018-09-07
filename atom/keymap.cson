@@ -1,7 +1,7 @@
 # Your keymap
 #
 # Atom keymaps work similarly to stylesheets. Just as stylesheets use selectors
-# to apply styles to elements, Atom keymaps use selectors to associate
+# to apply styles to elements, Atom keymaps use selectors to associate``
 # keystrokes with events in specific contexts.
 #
 # You can create a new keybinding in this file by typing "key" and then hitting
@@ -16,3 +16,19 @@
 #   'ctrl-P': 'core:move-up'
 #   'ctrl-p': 'core:move-down'
 #
+
+'.editor':
+  'cmd-M': 'marked:open'
+
+'atom-workspace':
+  'alt-cmd-o': 'overtype-mode:toggle'
+  'ctrl-alt-D': 'date:date'
+
+'atom-text-editor':
+  'ctrl-alt-W': 'editor:toggle-soft-wrap'
+  'ctrl-alt-A': 'minimap:toggle'
+  'shift-f5': 'sort-lines:reverse-sort'
+  'alt-D': 'toggle-markdown-task:toggle'
+
+'.platform-darwin atom-text-editor':
+  'cmd-:': 'spell-check:correct-misspelling'

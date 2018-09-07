@@ -28,10 +28,13 @@
     tableExtraPipes: true
   metrics:
     userId: "8d95aacb5f53aa86cbed1e11dc5edcd5ceb7e941"
+<<<<<<< HEAD
+=======
   minimap:
     plugins:
       cursorline: true
       cursorlineDecorationsZIndex: 0
+>>>>>>> 8236b9a900a613adaff21ff13c7b689af3a78a29
   organized: {}
   "release-notes":
     viewedVersion: "0.84.0"

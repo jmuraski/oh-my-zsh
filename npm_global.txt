@@ -1,8 +1,11 @@
+artillery
+bench-rest
+bower
+coffee-script
 angular-cli
 bower
 david
 express-generator
-gitbook
 gulp
 http-server
 httpster
@@ -10,4 +13,6 @@ node-inspector
 nodemon
 npm-check-updates
 recursive-readdir
+sloc
+updtr
 typings
