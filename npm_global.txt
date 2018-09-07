@@ -1,10 +1,13 @@
+artillery
+bench-rest
+bower
+coffee-script
 angular-cli
 bower
 coffee-script
 david
 express-generator
 generator-gulp-angular
-gitbook
 grunt-cli
 gulp
 http-server
@@ -15,6 +18,8 @@ npm
 npm-check-updates
 recursive-readdir
 requirejs
+sloc
+updtr
 ri-simulator
 typings
 uhubDashboard

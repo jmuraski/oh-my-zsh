@@ -1,16 +1,16 @@
 #! /bin/bash
 
-boot2docker halt
+VBoxManage controlvm $1 acpipowerbutton || true
 
-for i in {49000..49999}; do
-  
+for i in $(eval echo {$2..$3}); do
+
   x=$((i % 100));
-  
-  if [ "$x" -eq "0" ] 
+
+  if [ "$x" -eq "0" ]
   then
     echo "On $i"
   fi
 
-  VBoxManage modifyvm "boot2docker-vm" --natpf1 "tcp-port$i,tcp,,$i,,$i";
-  VBoxManage modifyvm "boot2docker-vm" --natpf1 "udp-port$i,udp,,$i,,$i";
+  VBoxManage modifyvm "$1" --natpf1 "tcp-port$i,tcp,,$i,,$i";
+  VBoxManage modifyvm "$1" --natpf1 "udp-port$i,udp,,$i,,$i";
 done

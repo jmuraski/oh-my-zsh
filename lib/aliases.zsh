@@ -129,7 +129,17 @@ alias versionOne='open "https://www3.v1host.com/partner_DevJam/TeamRoom.mvc/Show
 alias sauce-connect="/usr/local/Sauce-Connect/open"
 alias chromeInsecure="open -a Google\ Chrome --args --disable-web-security"
 alias marked="open -a Marked\ 2 "
-alias notes="atom $WORKSPACE/notes"
+
+export NOTES="$WORKSPACE/notes"
+alias notes="atom $NOTES"
+export UHG_NOTES_ROOT="$NOTES/UHG"
+export UHG_PROJECT_INDEX="$UHG_NOTES_ROOT/projects/project-list.md"
+export UHG_MEETING_NOTES="$UHG_NOTES_ROOT/meetings"
+export UHG_DATA="$WORKSPACE/dmii-notes/data-inventory/data-sources.md"
+export UHG_SPRINTS="$WORKSPACE/dmii-notes/sprint/sprint-index.md"
+export UHG_DOCS="$UHG_NOTES_ROOT/docs"
+
+alias uhg-notes="atom $UHG_NOTES_ROOT/filters.md; atom -n $UHG_PROJECT_INDEX; atom -n $UHG_MEETING_NOTES; atom -n $UHG_DATA; atom -n $UHG_DOCS; atom -n $UHG_SPRINTS"
 
 alias -s log="less -MN"
 alias -s txt="less -MN"
