@@ -107,42 +107,13 @@ alias git-prune='git remote prune origin'
 alias isodateutc='date -u +"%Y-%m-%dT%H:%M:%SZ"'
 alias isodate='date +"%Y-%m-%dT%H:%M:%SZ"'
 
-# Best Buy Aliases
-#alias ssh-ca-dev30='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-30.us-west-2.compute.amazonaws.com'
-#alias ssh-ca-dev-tomcat='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-30.us-west-2.compute.amazonaws.com'
-#alias ssh-ca-dev32='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-32.us-west-2.compute.amazonaws.com'
-#alias ssh-ca-dev-apache='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-245-110-32.us-west-2.compute.amazonaws.com'
-#alias ssh-ca-uat40='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-214-28-40.us-west-2.compute.amazonaws.com'
-#alias ssh-ca-uat-tomcat='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-214-28-40.us-west-2.compute.amazonaws.com'
-#alias ssh-ca-uat35='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-214-28-35.us-west-2.compute.amazonaws.com'
-#alias ssh-ca-uat-apache='ssh -v -i ~/.ssh/keys/ca-ssh-keypair.pem ec2-user@ec2-54-214-28-35.us-west-2.compute.amazonaws.com'
-#alias ssh-jenkins='ssh -v -i ~/.ssh/keys/jenkins-ssh-keypair.pem ec2-user@54.245.238.194'
-#alias bounceCommerceUi='curl --user admin:admin "http://localhost:8080/manager/text/reload?path=/commerceui"'
-#alias jenkins='open "http://54.245.238.194/"'
-#alias artifactory='open "https://code.bestbuy.com/artifactory/"'
-
-#Dev Jam Aliases
-alias ssh-devjam-ci='ssh root@192.241.248.176'
-alias ssh-devjam-docker='ssh root@107.170.22.200'
-alias jenkins-devjam='open "http://192.241.248.176:8090/"'
-alias ports-devjam="ssh root@107.170.22.200 docker ps | grep -o 'app.*' | sed -e 's/\(app\/[a-z,A-Z,_,0-9]*\).*\(0.0.0.0\)/\1 \2/' | awk '{print \$1 \" - \" \$2}'"
-alias versionOne='open "https://www3.v1host.com/partner_DevJam/TeamRoom.mvc/Show/1762"'
-
-
 alias sauce-connect="/usr/local/Sauce-Connect/open"
 alias chromeInsecure="open -a Google\ Chrome --args --disable-web-security"
 alias marked="open -a Marked\ 2 "
 
 export NOTES="$WORKSPACE/notes"
-alias notes="atom $NOTES"
-export UHG_NOTES_ROOT="$NOTES/UHG"
-export UHG_PROJECT_INDEX="$UHG_NOTES_ROOT/projects/project-list.md"
-export UHG_MEETING_NOTES="$UHG_NOTES_ROOT/meetings"
-export UHG_DATA="$WORKSPACE/dmii-notes/data-inventory/data-sources.md"
-export UHG_SPRINTS="$WORKSPACE/dmii-notes/sprint/sprint-index.md"
-export UHG_DOCS="$UHG_NOTES_ROOT/docs"
-
-alias uhg-notes="atom $UHG_NOTES_ROOT/filters.md; atom -n $UHG_PROJECT_INDEX; atom -n $UHG_MEETING_NOTES; atom -n $UHG_DATA; atom -n $UHG_DOCS; atom -n $UHG_SPRINTS"
+export WIKI="$NOTES/wiki"
+alias notes="atom -n $NOTES; atom -n $WIKI/home.md"
 
 alias -s log="less -MN"
 alias -s txt="less -MN"

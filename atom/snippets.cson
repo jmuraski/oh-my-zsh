@@ -13,3 +13,12 @@
 #     'prefix': 'log'
 #     'body': 'console.log $1'
 #
+
+'.text.md':
+  'todo.markdown':
+    'prefix': 'todo'
+    'body': '[${1:TASK} created:${3:CurrentDate} ${4:due}:${5:DueDate}](#${2:TODO}:)$6'
+
+  'link.markdown':
+    'prefix': 'link'
+    'body': '[${1:Description}](${2:URL})$3'

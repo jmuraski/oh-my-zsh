@@ -56,21 +56,6 @@ function open_command() {
   fi
 }
 
-function dme(){
-  COMMAND="docker-machine env $1"
-  echo $COMMAND
-  eval $COMMAND
-  eval "$(docker-machine env $1)"
-}
-
-function dmsc(){
-  docker-machine start $1
-  COMMAND="docker-machine env $1"
-  echo $COMMAND
-  eval $COMMAND
-  eval "$(docker-machine env $1)"
-}
-
 #
 # Get the value of an alias.
 #

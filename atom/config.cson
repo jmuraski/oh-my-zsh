@@ -7,6 +7,9 @@
       "table-editor"
       "Hydrogen"
       "graphviz-preview"
+      "parcel"
+      "language-gfm"
+      "atom-shortcuts"
     ]
     telemetryConsent: "no"
     themes: [
