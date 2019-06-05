@@ -29,7 +29,7 @@ ZSH_THEME="jmuraski"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow coffee bower brew node npm rvm svn history mvn, docker, grails, tmux, tmuxinator, docker-compose, docker-machine)
+plugins=(git, git-flow,brew, node, npm, history, mvn, docker, tmux, tmuxinator, docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -50,7 +50,7 @@ export WORKON_HOME=~/.ve
 export PATH="/usr/local/heroku/bin:$PATH"
 export PROJECT_HOME=~/Documents/workspace
 eval "$(pyenv init -)"
-pyenv virtualenvwrapper_lazy
+# pyenv virtualenvwrapper_lazy
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -58,29 +58,13 @@ export NVM_DIR="$HOME/.nvm"
 
 # place this after nvm initialization!
 autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
+proxyoff
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/jmuraski/.gvm/bin/gvm-init.sh" ]] && source "/Users/jmuraski/.gvm/bin/gvm-init.sh"
+[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/jmuraski/.sdkman"
-[[ -s "/Users/jmuraski/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jmuraski/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

@@ -60,6 +60,7 @@ alias vi='vim'
 alias exip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias inip='ipconfig getifaddr en0'
 alias shipit='open $WORKSPACE/shipit'
+alias h="history"
 
 alias startpostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias stoppostgres='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
@@ -103,6 +104,7 @@ alias npmr='npm run '
 alias dm='docker-machine'
 
 alias git-prune='git remote prune origin'
+alias git-publish='git push -u origin HEAD'
 
 alias isodateutc='date -u +"%Y-%m-%dT%H:%M:%SZ"'
 alias isodate='date +"%Y-%m-%dT%H:%M:%SZ"'
@@ -135,3 +137,5 @@ alias 6='cd -6'
 alias 7='cd -7'
 alias 8='cd -8'
 alias 9='cd -9'
+
+alias drone='open https://drone6.target.com/Distribution-3D/'

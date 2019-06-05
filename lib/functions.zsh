@@ -249,3 +249,41 @@ function omz_urldecode {
 
   echo -E "$decoded"
 }
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+
+function proxyon {
+  export http_proxy=http://sqdlx0001.hq.target.com:3128
+  export https_proxy=http://sqdlx0001.hq.target.com:3128
+  export HTTP_PROXY=http://sqdlx0001.hq.target.com:3128
+  export HTTPS_PROXY=http://sqdlx0001.hq.target.com:3128
+  export NO_PROXY=127.0.0.1,localhost,target.com,corp.target.com,hq.target.com,dist.target.com,Email.target.com,stores.target.com,labs.target.com
+  # export VAGRANT_HTTP_PROXY=http://sqdlx0001.hq.target.com:3128
+  # export VAGRANT_HTTPS_PROXY=http://sqdlx0001.hq.target.com:3128
+  # export VAGRANT_NO_PROXY=127.0.0.1,localhost,target.com,corp.target.com,hq.target.com,dist.target.com,Email.target.com,stores.target.com,labs.target.com
+}
+function proxyoff {
+  unset http_proxy
+  unset https_proxy
+  unset HTTP_PROXY
+  unset HTTPS_PROXY
+  unset NO_PROXY
+  unset VAGRANT_HTTP_PROXY
+  unset VAGRANT_HTTPS_PROXY
+  unset VAGRANT_NO_PROXY
+}

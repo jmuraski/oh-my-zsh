@@ -20,6 +20,7 @@
     dateFormat: "YYYY-MM-DD"
     dateTimeFormat: "YYYY-MM-DDTHH:mm:ssZ"
   editor:
+    fontSize: 16
     invisibles: {}
     showInvisibles: true
     tabType: "soft"
