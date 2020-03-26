@@ -4,12 +4,8 @@
     kernelNotifications: true
   core:
     disabledPackages: [
-      "table-editor"
-      "Hydrogen"
-      "graphviz-preview"
-      "parcel"
       "language-gfm"
-      "atom-shortcuts"
+      "react"
     ]
     telemetryConsent: "no"
     themes: [
@@ -20,13 +16,19 @@
     dateFormat: "YYYY-MM-DD"
     dateTimeFormat: "YYYY-MM-DDTHH:mm:ssZ"
   editor:
-    fontSize: 16
+    fontSize: 15
     invisibles: {}
     showInvisibles: true
     tabType: "soft"
   "exception-reporting":
     userId: "2fb2db8f-15a3-4bc5-24db-5e0bd8d912d8"
   "graphviz-preview-plus": {}
+  "markdown-preview": {}
+  "markdown-table-formatter":
+    markdownGrammarScopes: [
+      "source.gfm"
+      "text.md"
+    ]
   "markdown-writer":
     tableAlignment: "left"
     tableExtraPipes: true

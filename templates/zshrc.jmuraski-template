@@ -32,6 +32,8 @@ ZSH_THEME="jmuraski"
 plugins=(git, git-flow,brew, node, npm, history, mvn, docker, tmux, tmuxinator, docker-compose)
 
 source $ZSH/oh-my-zsh.sh
+. ~/amend.sh
+proxyon
 
 # RVM line
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
@@ -61,7 +63,6 @@ autoload -U add-zsh-hook
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-proxyoff
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 

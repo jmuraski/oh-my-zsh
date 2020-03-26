@@ -56,6 +56,8 @@ alias editdirs="atom ~/.oh-my-zsh/lib/directories.zsh"
 alias vimdirs="vim ~/.oh-my-zsh/lib/directories.zsh"
 alias editssh='atom ~/.ssh/config'
 alias vimssh='vim ~/.ssh/config'
+alias editenv='atom ~/.oh-my-zsh/custom/env.zsh'
+alias vienv='vim ~/.oh-my-zsh/custom/env.zsh'
 alias vi='vim'
 alias exip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias inip='ipconfig getifaddr en0'
@@ -139,3 +141,6 @@ alias 8='cd -8'
 alias 9='cd -9'
 
 alias drone='open https://drone6.target.com/Distribution-3D/'
+alias jira='open "https://jira.target.com/secure/RapidBoard.jspa?rapidView=5437&selectedIssue=OB3D-18&quickFilter=25296"'
+alias op='lsof -nP | grep -i listen'
+alias opc='netstat -anvp tcp | grep -i listen'

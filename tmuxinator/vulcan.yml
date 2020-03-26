@@ -1,0 +1,36 @@
+# ~/.tmuxinator/zeo_server.yml
+
+name: vulcan
+root: ~/Documents/workspace/target/vulcan
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - testing:
+      layout: 648b,150x39,0,0[150x22,0,0,0,150x16,0,23{50x16,0,23,2,49x16,51,23,3,49x16,101,23,4}]
+      panes:
+        - test:
+          - npm test
+        - lint:
+          - nodemon --exec "npm run lint"
+        - mock:
+          - npm run start:mock
+        - server:
+          - npm start
+  - guard:
+      layout: main-horizontal
+      panes:
+        - #empty, just shell

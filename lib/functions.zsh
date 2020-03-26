@@ -267,22 +267,35 @@ load-nvmrc() {
   fi
 }
 
-function proxyon {
-  export http_proxy=http://sqdlx0001.hq.target.com:3128
-  export https_proxy=http://sqdlx0001.hq.target.com:3128
-  export HTTP_PROXY=http://sqdlx0001.hq.target.com:3128
-  export HTTPS_PROXY=http://sqdlx0001.hq.target.com:3128
-  export NO_PROXY=127.0.0.1,localhost,target.com,corp.target.com,hq.target.com,dist.target.com,Email.target.com,stores.target.com,labs.target.com
-  # export VAGRANT_HTTP_PROXY=http://sqdlx0001.hq.target.com:3128
-  # export VAGRANT_HTTPS_PROXY=http://sqdlx0001.hq.target.com:3128
-  # export VAGRANT_NO_PROXY=127.0.0.1,localhost,target.com,corp.target.com,hq.target.com,dist.target.com,Email.target.com,stores.target.com,labs.target.com
+# Turn on the proxy
+proxyon(){
+# Target proxy URL
+  PROXY="http://anycast.sig.target.com:8080"
+
+# Addresses which should not use Proxy - Beware not all software recognizes use of NO_PROXY in presence of http_proxy environment variable
+  export NO_PROXY='127.0.0.1,localhost,10.*,target.com,corp.target.com,hq.target.com,dist.target.com,Email.target.com,stores.target.com,labs.target.com'
+
+# Most Open Source and many closed source software will recognize these and use the indicated Proxy for internet access
+  export http_proxy=$PROXY
+  export https_proxy=$PROXY
+  export HTTP_PROXY=$PROXY
+  export HTTPS_PROXY=$PROXY
+  export ALL_PROXY=$PROXY
+
+# Vagrant is "special"
+  export VAGRANT_HTTP_PROXY=$PROXY
+  export VAGRANT_HTTPS_PROXY=$PROXY
+  export VAGRANT_NO_PROXY=$NO_PROXY
 }
-function proxyoff {
+
+# Turn off the proxy
+proxyoff(){
   unset http_proxy
-  unset https_proxy
   unset HTTP_PROXY
+  unset https_proxy
   unset HTTPS_PROXY
-  unset NO_PROXY
+  unset ALL_PROXY
+
   unset VAGRANT_HTTP_PROXY
   unset VAGRANT_HTTPS_PROXY
   unset VAGRANT_NO_PROXY
