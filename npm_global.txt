@@ -16,3 +16,4 @@ recursive-readdir
 sloc
 updtr
 typings
+yo
