@@ -31,6 +31,9 @@ bind L resize-pane -R 5
 
 bind C-k kill-session
 
+bind e setw synchronize-panes on
+bind E setw synchronize-panes off
+
 set-option -g mouse on
 
 set -g status-fg white
