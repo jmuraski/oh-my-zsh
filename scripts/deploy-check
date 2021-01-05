@@ -1,0 +1,9 @@
+#!/bin/bash
+aws-okta login shipt-prod
+open -a Firefox https://metrics.shipttech.com/d/uCWvINHWk/production-shipt-aviator\?orgId\=1\&refresh\=5s
+open -a Firefox https://metrics.shipttech.com/d/EqBmScyWz/business-metrics?orgId=1&refresh=5s
+open -a Firefox https://metrics.shipttech.com/d/BHKirAdZk/production-order-service?orgId=1&refresh=5s
+open -a Firefox https://metrics.shipttech.com/d/uLevAW7Zz/production-shipt-cart-service?orgId=1&refresh=5s
+open -a Firefox https://kubedashian.shipt.com/apps/shipt-aviator
+open -a Firefox https://kubedashian.shipt.com/apps/order-service
+open -a Firefox https://kubedashian.shipt.com/apps/shipt-cart-service 

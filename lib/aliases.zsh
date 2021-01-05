@@ -1,4 +1,5 @@
 export WORKSPACE="$HOME/Documents/workspace"
+
 # Push and pop directories on directory stack
 alias pu='pushd'
 alias po='popd'
@@ -43,67 +44,35 @@ alias afind='ack-grep -il'
 alias lls="ll -alF $MY_SCRIPTS"
 alias sshKeys="cd ~/Documents/keys/ssh"
 alias reload="source ~/.zshrc"
-alias editprofile="atom ~/.zshrc"
+alias editprofile="code ~/.zshrc"
 alias vimprofile="vim ~/.zshrc"
-alias editalias="atom ~/.oh-my-zsh/lib/aliases.zsh"
+alias editalias="code ~/.oh-my-zsh/lib/aliases.zsh"
 alias vimalias="vim ~/.oh-my-zsh/lib/aliases.zsh"
-alias edithosts="atom /private/etc/hosts"
+alias edithosts="code /private/etc/hosts"
 alias vimhosts="vim /private/etc/hosts"
 alias listhosts="cat /private/etc/hosts"
-alias editfunctions="atom ~/.oh-my-zsh/lib/functions.zsh"
+alias editfunctions="code ~/.oh-my-zsh/lib/functions.zsh"
 alias vimfunctions="vim ~/.oh-my-zsh/lib/functions.zsh"
-alias editdirs="atom ~/.oh-my-zsh/lib/directories.zsh"
+alias editdirs="code ~/.oh-my-zsh/lib/directories.zsh"
 alias vimdirs="vim ~/.oh-my-zsh/lib/directories.zsh"
-alias editssh='atom ~/.ssh/config'
+alias editssh='code ~/.ssh/config'
 alias vimssh='vim ~/.ssh/config'
-alias editenv='atom ~/.oh-my-zsh/custom/env.zsh'
+alias editenv='code ~/.oh-my-zsh/custom/env.zsh'
 alias vienv='vim ~/.oh-my-zsh/custom/env.zsh'
+alias editspoons='code ~/.hammerspoon/hammerspoon.code-workspace'
+alias editdash='code ~/.oh-my-zsh/scripts/dashboards'
+alias vidash='vim code ~/.oh-my-zsh/scripts/dashboards'
+alias goplay='code /Users/joemuraski/go/src/github.com/jmuraski/playground/playground.code-workspace'
 alias vi='vim'
 alias exip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias inip='ipconfig getifaddr en0'
 alias shipit='open $WORKSPACE/shipit'
 alias h="history"
-
-alias startpostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias stoppostgres='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-alias startTomcat7='/usr/local/apache-tomcat-7.0.37/bin/startup.sh'
-alias tomcat7Start='/usr/local/apache-tomcat-7.0.37/bin/startup.sh'
-alias shutdownTomcat7='/usr/local/apache-tomcat-7.0.37/bin/shutdown.sh'
-alias tomcat7Shutdown='/usr/local/apache-tomcat-7.0.37/bin/shutdown.sh'
-alias tailTomcat='tail -f /usr/local/apache-tomcat-7.0.37/logs/catalina.out'
-
-alias startmongo='/usr/local/Cellar/mongodb/2.4.9/mongod run --rest'
-# export CC=gcc
-
-# Manta Aliases
-alias start1='~/Documents/Virtual\ Machines.localized/startUbuntu.sh'
-alias con1="ssh jmuraski@192.168.163.100"
-
-
-# Remote Insights Aliases
-alias startRedis='redis-server /usr/local/etc/redis.conf'
+alias compose="docker-compose"
 
 
 # Fleet Commands
-alias fl='fleetctl '
-alias fld='fleetctl destroy '
-alias flm='fleetctl list-machines'
-alias flst='fleetctl start '
-alias fls='fleetctl start '
-alias flsto='fleetctl stop '
-alias flop='fleetctl stop '
-alias flu='fleetctl list-units'
-alias flub='fleetctl submit '
-alias fluf='fleetctl list-unit-files'
-alias flssh='fleetctl ssh '
-alias flstat='fleetctl status '
-alias flat='fleetctl status '
-alias fload='fleetctl load '
-alias flog='fleetctl journal '
-alias flogs='fleetctl journal -f '
 alias npmr='npm run '
-
-alias dm='docker-machine'
 
 alias git-prune='git remote prune origin'
 alias git-publish='git push -u origin HEAD'
@@ -111,24 +80,32 @@ alias git-publish='git push -u origin HEAD'
 alias isodateutc='date -u +"%Y-%m-%dT%H:%M:%SZ"'
 alias isodate='date +"%Y-%m-%dT%H:%M:%SZ"'
 
-alias sauce-connect="/usr/local/Sauce-Connect/open"
 alias chromeInsecure="open -a Google\ Chrome --args --disable-web-security"
 alias marked="open -a Marked\ 2 "
 
 export NOTES="$WORKSPACE/notes"
-export WIKI="$NOTES/wiki"
-alias notes="atom -n $NOTES; atom -n $WIKI/home.md"
-
+export WIKI="$WORKSPACE/wiki"
+alias notes="code $NOTES/notes.code-workspace"
+alias wiki="code $WIKI/wiki.code-workspace;"
+alias journal="code $WIKI/journal-2021.md"
 alias -s log="less -MN"
 alias -s txt="less -MN"
 alias -s md="open -a Marked\ 2"
 alias -g G='| grep'
 alias rvmLoad='rvm .rvmrc'
 
-alias ...='../..'
-alias ....='../../..'
-alias .....='../../../..'
-alias ......='../../../../..'
+# Aliases to Parse Hal Diangosis File
+alias -g OL="| jq --unbuffered '. | {id: .OrderId,  platform_order: .PlatformOrder, created_at: .CreatedAt, status: .OrderlinesCount.status, og_lines: .OrderlinesCount.og_line_list_count, os_count: .OrderlinesCount.os_line_count}' | jq --unbuffered 'select(.status==\"red\") | .'"
+alias -g AC="| jq --unbuffered '. | {id: .OrderId,  platform_order: .PlatformOrder, created_at: .CreatedAt, status: .OrderlinesCheck.status, invalid_lines: .OrderlinesCheck.invalid_order_lines, total_lines: .OrderlinesCheck.order_lines}' | jq --unbuffered 'select(.status==\"red\") | .'"
+alias -g ST="| jq --unbuffered '. | {id: .OrderId,  platform_order: .PlatformOrder, created_at: .CreatedAt, status: .StatusCheck.status, og_status: .StatusCheck.og_order_status, os_status: .StatusCheck.order_service_order_status, av_status: .StatusCheck.redis_order_status}' | jq --unbuffered 'select(.status==\"red\") | .'"
+
+# Aliases to Parse DLQ Responses
+alias -g PMEM="| jq ' . | {order_id: .data.order.id, status: .data.order.status, message_type: .message_type, message_id: .message_id, sent_at: .message_sent_at}'"
+alias -g PSHOP="| jq ' . | {order_id: .data.order_id, status: .data.status, message_type: .message_type, message_id: .message_id}'"
+
+# Some shortcuts used alot
+alias -g JID="| jq '. | .id' -c | tr -d '\"'"
+alias -g TRQ="| tr -d '\"'"
 
 alias 1='cd -'
 alias 2='cd -2'
@@ -140,7 +117,14 @@ alias 7='cd -7'
 alias 8='cd -8'
 alias 9='cd -9'
 
-alias drone='open https://drone6.target.com/Distribution-3D/'
-alias jira='open "https://jira.target.com/secure/RapidBoard.jspa?rapidView=5437&selectedIssue=OB3D-18&quickFilter=25296"'
 alias op='lsof -nP | grep -i listen'
 alias opc='netstat -anvp tcp | grep -i listen'
+alias resolve='cd $(pwd -P)'
+alias gps='gopass show'
+alias rolldash='open "https://rollbar.com/ShiptLLC/?sort=total&environments=production&levels=30&levels=40&levels=50&duration=7d&tz=US%2FCentral&projects=189272&projects=258178&projects=277537&from=2020-11-14T09%3A00%3A00-06%3A00&to=2020-11-16T09%3A41%3A39-06%3A00&order=desc"'
+alias kubedashian='open "https://kubedashian.shipt.com/"'
+
+alias ts='date +%s'
+alias cts='date -r'
+
+alias avmon="aws-okta exec shipt-prod -- python3 /Users/joemuraski/Documents/workspace/go/shipt/shipt-aviator/scripts/avmonitor.py"

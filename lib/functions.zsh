@@ -267,36 +267,66 @@ load-nvmrc() {
   fi
 }
 
-# Turn on the proxy
-proxyon(){
-# Target proxy URL
-  PROXY="http://anycast.sig.target.com:8080"
-
-# Addresses which should not use Proxy - Beware not all software recognizes use of NO_PROXY in presence of http_proxy environment variable
-  export NO_PROXY='127.0.0.1,localhost,10.*,target.com,corp.target.com,hq.target.com,dist.target.com,Email.target.com,stores.target.com,labs.target.com'
-
-# Most Open Source and many closed source software will recognize these and use the indicated Proxy for internet access
-  export http_proxy=$PROXY
-  export https_proxy=$PROXY
-  export HTTP_PROXY=$PROXY
-  export HTTPS_PROXY=$PROXY
-  export ALL_PROXY=$PROXY
-
-# Vagrant is "special"
-  export VAGRANT_HTTP_PROXY=$PROXY
-  export VAGRANT_HTTPS_PROXY=$PROXY
-  export VAGRANT_NO_PROXY=$NO_PROXY
+redis-prod-cart-east() {
+  docker run --rm --name redis-cli-pce -it goodsmileduck/redis-cli redis-cli -h production-basket.s2swdm.ng.0001.use1.cache.amazonaws.com -p 6379
 }
 
-# Turn off the proxy
-proxyoff(){
-  unset http_proxy
-  unset HTTP_PROXY
-  unset https_proxy
-  unset HTTPS_PROXY
-  unset ALL_PROXY
+redis-stage-cart-east() {
+  docker run --rm --name redis-cli-sce -it goodsmileduck/redis-cli redis-cli -h cart-service-carts.vogn0g.ng.0001.use1.cache.amazonaws.com -p 6379
+}
 
-  unset VAGRANT_HTTP_PROXY
-  unset VAGRANT_HTTPS_PROXY
-  unset VAGRANT_NO_PROXY
+redis-prod-cart-west() {
+  docker run --rm --name redis-cli-pcw -it goodsmileduck/redis-cli redis-cli -h production-basket.qxj8nc.ng.0001.usw2.cache.amazonaws.com -p 6379
+}
+
+redis-stage-cart-west() {
+  docker run --rm --name redis-cli-scw -it goodsmileduck/redis-cli redis-cli -h cart-service-carts.14tdzx.ng.0001.usw2.cache.amazonaws.com -p 6379
+}
+
+redis-prod-aviator-east() {
+  docker run --rm --name redis-cli-pae -it goodsmileduck/redis-cli redis-cli -h prod-aviator-orders2.s2swdm.ng.0001.use1.cache.amazonaws.com -p 6379
+}
+
+redis-stage-aviator-east() {
+  docker run --rm --name redis-cli-sae -it goodsmileduck/redis-cli redis-cli -h shipt-aviator-ro.vogn0g.ng.0001.use1.cache.amazonaws.com -p 6379
+}
+
+redis-prod-aviator-west() {
+  docker run --rm --name redis-cli-paw -it goodsmileduck/redis-cli redis-cli -h prod-aviator-orders2.qxj8nc.ng.0001.usw2.cache.amazonaws.com -p 6379
+}
+
+redis-stage-aviator-west() {
+  docker run --rm --name redis-cli-saw -it goodsmileduck/redis-cli redis-cli -h shipt-aviator-ro.14tdzx.ng.0001.usw2.cache.amazonaws.com -p 6379
+}
+
+redis-prod-orders-east() {
+  docker run --rm --name redis-cli-poe -it goodsmileduck/redis-cli redis-cli -h prd-cartsvc-orders.s2swdm.ng.0001.use1.cache.amazonaws.com -p 6379
+}
+
+redis-prod-orders-west() {
+  docker run --rm --name redis-cli-pow -it goodsmileduck/redis-cli redis-cli -h prd-cartsvc-orders.qxj8nc.ng.0001.usw2.cache.amazonaws.com -p 6379
+}
+
+redis-stage-orders-east() {
+  docker run --rm --name redis-cli-soe -it goodsmileduck/redis-cli redis-cli -h cart-service-orders.14tdzx.ng.0001.usw2.cache.amazonaws.com -p 6379
+}
+
+redis-stage-orders-west() {
+  docker run --rm --name redis-cli-sow -it goodsmileduck/redis-cli redis-cli -h cart-service-orders.vogn0g.ng.0001.use1.cache.amazonaws.com -p 6379
+}
+
+adminOrder() {
+  open -a "Google Chrome" "https://admin.shipt.com/admin/orders/$1"
+}
+
+adminDrivenOrder() {
+  VALUE=$(echo "$1" | tr -d "E_" | tr -d '"')
+  open -a "Google Chrome" "https://admin.shipt.com/admin/deliveries/$VALUE"
+}
+
+ffile(){
+  PVIEW='sed -n $(( {n} - 1 )),$(( {n} + 6 ))p '
+  PVIEW+="$1"
+  echo $PVIEW
+  cat $1 | fzf --preview $PVIEW
 }

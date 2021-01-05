@@ -1,0 +1,16 @@
+open -a "Google Chrome" "https://shipt.okta.com/app/UserHome"
+open -a "Google Chrome" "https://kubedashian.shipt.com/apps/shipt-aviator"
+open -a "Google Chrome" "https://kubedashian.shipt.com/apps/order-service"
+open -a "Google Chrome" "https://kubedashian.shipt.com/apps/shipt-cart-service"
+open -a "Google Chrome" "https://metrics.shipttech.com/d/I7USpBcGk/incident-triage?orgId=1&refresh=10s" # Incident triage
+open -a "Google Chrome" "https://metrics.shipttech.com/d/WJN-gETGk/business-metrics-heb?orgId=1&refresh=5s" #Business Metrics
+open -a "Google Chrome" "https://metrics.shipttech.com/d/uCWvINHWk/production-shipt-aviator?orgId=1&orgId%5C=1%5C&refresh%5C=5s&refresh=5s" # Aviator Dash
+open -a "Google Chrome" "https://metrics.shipttech.com/d/000007761/shipt-aviator-production?orgId=1&refresh=10s" # Another Aviator Dash
+open -a "Google Chrome" "https://metrics.shipttech.com/d/x2AkFvpGz/og-aviator-sync-state-transitions?orgId=1&refresh=30s"     #Aviator Sync State transitions
+open -a "Google Chrome" "https://metrics.shipttech.com/d/uLevAW7Zz/production-shipt-cart-service?orgId=1&refresh=5s" # Cart service
+open -a "Google Chrome" "https://metrics.shipttech.com/d/BHKirAdZk/production-order-service?orgId=1&refresh=5s" # Order service
+open -a "Google Chrome" "https://metrics.shipttech.com/d/4Qqrx_1Mz/order-journey-monitor?orgId=1&refresh=30s&from=now-2d&to=now" # Order Journey monitor
+open -a "Google Chrome" "https://metrics.shipttech.com/d/6bdu_MtGk/aviator-dlq-dashboard?orgId=1&refresh=5s" # Aviator dlq
+open -a "Google Chrome" "https://metrics.shipttech.com/d/1gYbEBSMz/production-offer-service?orgId=1&refresh=5s" #Offer Service
+open -a "Google Chrome" "https://metrics.shipttech.com/d/fr9wZorWz/kafka-exporter-overview-production-east?orgId=1&var-job=kafka-exporter-production-east&var-instance=kafka-production-east1.monitoring:9308&var-topic=prd.bus.offer-service.v1.bundleActivity&from=now-24h&to=now&refresh=10s" #Kafka Stuff
+open -a "Google Chrome" "https://metrics.shipttech.com/d/EDdEFKbGk/aviator-production-redis?orgId=1&from=now-2d&to=now&refresh=10s"

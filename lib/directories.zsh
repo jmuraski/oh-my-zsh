@@ -19,11 +19,12 @@ export HOMEBREW_GITHUB_API_TOKEN="1c44832086f692d84ed2d6369920f35ae7ede7fe"
 export ANDROID_HOME="/Users/jmuraski/Documents/android/adt-bundle-mac-x86_64-20140321/sdk"
 export ANDROID_TOOLS="$ANDROID_HOME/platform-tools"
 export GOPATH=$HOME/go
-export GOBIN=/usr/local/go/bin
-
+export GOBIN=$GOPATH/bin
+export SHIPT_HOME='/Users/joemuraski/Documents/workspace/go/shipt/'
+export PRIORITY_PATH=$HOME/.oh-my-zsh/priority_path
 
 alias llw="ll $WORKSPACE"
-alias cds="cd $MY_SCRIPTS"
+alias cdscripts="cd $MY_SCRIPTS"
 
 notebook(){
   cd ~/Documents/Notebooks;
@@ -44,6 +45,11 @@ cdw(){
   cd $WORKSPACE/$1;
 }
 compctl -W $WORKSPACE/ -/ cdw
+
+cds(){
+  cd $SHIPT_HOME/$1;
+}
+compctl -W $SHIPT_HOME/ -/ cds
 
 # mkdir & cd to it
 function mcd() {
